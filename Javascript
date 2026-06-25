@@ -2,4 +2,117 @@
 Self Learning and self-notes for Javascript in depth
 
                                        ####   JAVASCRIPT  ##3
-JavaScript is a programming language used to create dynamic content for websites. It is a lightweight, cross-platform, and single-threaded programming language. It's an interpreted language that executes code line by line, providing more flexibility.
+JavaScript is a programming language used to create dynamic content(DYNAMIC TYPE PROGRAMING LANGUAGE) for websites. It is a lightweight, cross-platform, and single-threaded programming language. It's an interpreted language that executes code line by line, providing more flexibility.
+1. Interpreted language: Code is executed line by line.
+
+2. Dynamically typed: Variable types are determined at runtime.(JavaScript is called a dynamically typed language because you don't need to declare the data type of a variable explicitly. The type is decided automatically at runtime and can change later.
+let data = 10;       // Number
+data = "Hello";      // String
+data = true;         // Boolean
+
+3. Single-threaded: Executes one task at a time (but supports asynchronous operations).
+
+4. JavaScript is both synchronous and asynchronous.
+By default, JavaScript is Synchronous
+It executes code line by line, one statement after another.
+console.log("Start");             
+console.log("Middle");
+console.log("End");
+
+
+            ################# Single Thread And Multi Thread Concept########################
+
+Thread:
+A thread is the smallest unit of execution that performs a task in a program.
+Think of a thread as a worker.
+
+Single Thread:-------------------
+Only one worker is available.
+So tasks are done one by one.
+
+Example
+You have 3 tasks:
+Make Tea ☕
+Make Coffee ☕
+Make Noodles 🍜
+
+With one worker:
+Make Tea
+   ↓
+Make Coffee
+   ↓
+Make Noodles
+
+Only after the first task finishes does the next task start.
+J
+JavaScript has one Call Stack and executes code line by line.
+console.log("A");
+console.log("B");
+console.log("C");
+
+Output:
+A
+B
+C
+
+
+Multi Thread:---------------------
+Multiple workers are available.
+Different tasks can run at the same time.
+
+Example
+3 workers:
+Worker 1 → Make Tea
+Worker 2 → Make Coffee
+Worker 3 → Make Noodles
+
+All tasks can run simultaneously.
+Languages:  Java, C++, C, #Python (supports multithreading)
+
+
+Why JavaScript is Single Thread?--------------------------------------
+JavaScript was designed mainly for browsers.
+If multiple threads changed the same webpage at the same time, conflicts could occur.
+
+Example:
+Thread 1 → Change button color to Red
+Thread 2 → Change button color to Blue
+
+Which color should appear?
+
+To avoid such problems, JavaScript uses one main thread.
+Then How Does JavaScript Do Multiple Things?
+Using:
+Web APIs
+Callback Queue
+Event Loop
+Promises
+Async/Await
+
+Example:
+console.log("Start");
+setTimeout(() => {
+  console.log("Hello");
+}, 2000);
+console.log("End");
+
+Output:
+Start
+End
+Hello
+
+
+What happened?
+console.log("Start") runs.
+setTimeout() is given to Browser Web API.
+JavaScript continues.
+console.log("End") runs.
+After 2 seconds, callback comes back through the Event Loop.
+"Hello" is printed.
+
+So JavaScript remains single-threaded, but behaves asynchronously.
+
+short---------------
+Single Thread: A program has only one thread and executes one task at a time. JavaScript is single-threaded.
+Multi Thread: A program has multiple threads that can execute multiple tasks concurrently or simultaneously. Java and C++ support multithreading.
+Key Point: JavaScript is single-threaded but can handle asynchronous operations using the Event Loop and Web APIs. 
