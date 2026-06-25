@@ -26,15 +26,15 @@ Thread:
 A thread is the smallest unit of execution that performs a task in a program.
 Think of a thread as a worker.
 
-Single Thread:-------------------
+Single Thread:---------------------------------------------------------------------------------------------------------
 Only one worker is available.
 So tasks are done one by one.
 
 Example
 You have 3 tasks:
-Make Tea ☕
-Make Coffee ☕
-Make Noodles 🍜
+Make Tea 
+Make Coffee 
+Make Noodles 
 
 With one worker:
 Make Tea
@@ -56,7 +56,7 @@ B
 C
 
 
-Multi Thread:---------------------
+Multi Thread:----------------------------------------------------------------------------------------------------
 Multiple workers are available.
 Different tasks can run at the same time.
 
@@ -70,7 +70,7 @@ All tasks can run simultaneously.
 Languages:  Java, C++, C, #Python (supports multithreading)
 
 
-Why JavaScript is Single Thread?--------------------------------------
+Why JavaScript is Single Thread?------------------------------------------------------------------------------------
 JavaScript was designed mainly for browsers.
 If multiple threads changed the same webpage at the same time, conflicts could occur.
 
@@ -120,7 +120,7 @@ Event-Driven: Responds to user actions (clicks, keystrokes) in real-time.
 Asynchronous: It can handle tasks like fetching data from servers without freezing the user interface.
 Rich Ecosystem: There are numerous libraries and frameworks built on JavaScript, such as React , Angular , and Vue.js, which make development faster and more efficient.
 
-Features------------------------------------------
+Features--------------------------------------------------------------------------------------------------------
 Client-Side Scripting: JavaScript runs on the user's browser, so it has a faster response time without needing to communicate with the server .
 Versatile: Can be used for a wide range of tasks, from simple calculations to complex server-side applications.
 Event-Driven: Responds to user actions (clicks, keystrokes) in real-time.
@@ -129,3 +129,153 @@ Rich Ecosystem: There are numerous libraries and frameworks built on JavaScript,
 Multi Thread: A program has multiple threads that can execute multiple tasks concurrently or simultaneously. Java and C++ support multithreading.
 Key Point: JavaScript is single-threaded but can handle asynchronous operations using the Event Loop and Web APIs. 
 
+               #################### History of javascript  #######################
+
+Birth of JavaScript (1995)-------------------------------------------------------------------------------------------
+In 1995, the Internet and websites were becoming popular. At that time, websites were mostly static pages.
+Example:
+Welcome to my website
+Contact Us
+About Us
+If a user clicked a button, nothing special happened on the page.
+Netscape Communications wanted websites to become more interactive and dynamic.
+Therefore, they hired Brendan Eich.
+Brendan Eich created JavaScript in only 10 days.
+
+Name Journey---------
+The language was initially called Mocha and later changed to LiveScript.
+In December 1995, LiveScript was renamed JavaScript,  
+Note: JavaScript and Java are completely different languages. The name JavaScript was chosen mainly for marketing purposes because Java was very popular at that time.
+Mocha---> LiveScript--->JavaScript
+
+
+Problem (Browser Wars)---------------------------------------------------------------------------------------------
+1997–2005 ke beech:
+Netscape Navigator aur Internet Explorer compete kar rahe the.
+Dono browsers JavaScript ko alag tarike se implement karte the.
+Different browsers implemented JavaScript differently.
+Ek browser me chalne wala code dusre browser me error de deta tha.
+
+Example:
+Code works in Netscape
+Doesn't work in Internet Explorer
+
+Example:
+Netscape Browser → Different behavior
+Internet Explorer → Different behavior
+
+Developers faced many compatibility issues.
+
+
+Solution of War------------------------------------------------------------------------------------------------------
+
+
+
+
+JavaScript was standardized.
+
+An organization called ECMA International created a standard specification for JavaScript.
+ECMA International ne JavaScript ke liye ek standard banaya:
+
+This standard was named =====> ECMAScript
+
+Difference--------------
+JavaScript = Actual Programming Language
+ECMAScript = Standard/Specification
+
+Ab sab browsers ko isi standard ko follow karna tha.
+1.  Better Browser Support--------
+Browsers ne gradually ECMAScript standards ko adopt karna shuru kiya
+Chrome
+Firefox
+Safari
+Edge
+sab ne same standards follow karne shuru kiye.
+
+2. Cross-Browser Testing-------------
+Developers alag-alag browsers me apne code ko test karne lage taaki har browser me website sahi chale.
+
+Result-------
+1.Better compatibility
+2.Same JavaScript code multiple browsers me chalne laga
+3.Web development easier ho gayi
+
+in short-----------------
+Browser Wars ki problem ko solve karne ke liye ECMAScript standard introduce kiya gaya. Is standard ne JavaScript ke rules define kiye, jise sab browsers ne follow kiya. Isse browser compatibility improve hui aur same code different browsers me sahi se chalne laga.
+
+
+---------------------------------------------------------------------------------------------------------------
+
+ECMAScript 1 (ES1) – 1997
+
+ECMAScript 1 was the first official standard version of JavaScript. Before ES1, different browsers implemented JavaScript differently. ES1 provided a common standard that all browsers could follow.
+
+Main Features
+1. Variables- Used to store data. Example---var name = "Reshma";
+
+2. Functions - Used to write reusable code.
+function greet() {
+   console.log("Hello");
+}
+
+3. Loops - Used to repeat tasks.
+for(var i=1; i<=5; i++) {
+   console.log(i);
+}
+
+4. Conditions - Used for decision-making.
+if(age >= 18) {
+   console.log("Adult");
+}
+Benefit: ---- ES1 laid the foundation of JavaScript and made it a standardized language.
+
+
+ECMAScript 2 (ES2) – 1998----------------------------------------------
+
+ES2 was mainly a maintenance release.
+What Changed->
+Improved the language specification.
+Fixed inconsistencies in the ES1 standard.
+Improved browser compatibility.
+New Feature - No major new programming features were introduced.
+Benefit: Made JavaScript more stable and consistent across browsers.
+
+ECMAScript 3 (ES3) – 1999--------------------------------------------------
+
+ES3 was the first major update of JavaScript and greatly improved its capabilities.
+1. Regular Expressions - Used for searching and matching text patterns.
+let pattern = /abc/;
+Example: console.log(pattern.test("abc123"));
+Output: true
+Benefit: Made text searching and validation easier.
+
+2. Better String Handling -  with strings became easier.
+let text = "Hello";
+console.log(text.length);
+Output: 5
+Benefit: Easier text manipulation.
+
+3. Try-Catch Error Handling - Used to handle errors safely.
+try {
+   console.log(x);
+}
+catch(error) {
+   console.log("Error Found");
+}
+Output: Error Found
+Benefit: Programs no longer crashed immediately when an error occurred.
+
+4. Do-While Loop - tuns at least one time before checking the condition.
+let i = 1;
+do {
+   console.log(i);
+   i++;
+} while(i <= 5);
+Benefit: Useful when code must execute at least once.
+
+
+ES1 (1997) → Introduced basic JavaScript features like Variables, Functions, Loops, and Conditions.
+
+ES2 (1998) → Improved the standard and browser compatibility.
+
+ES3 (1999) → Added powerful features like Regular Expressions, Better String Handling, Try-Catch Error Handling, and Do-While Loops, making JavaScript much more useful for real-world web development.
