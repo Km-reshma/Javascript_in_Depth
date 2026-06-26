@@ -16,5 +16,7 @@ getName(); //here we call the fiction show the output "namaste javascript"
 console.log(x); //print the output to the console value of x
 console.log(getName); */ // we does not invoke the function rather we print the function name so we get the whole function block as similar to the code 
 
+
+//with or without browser 
 console.log("hello");
-document.write("Hi Priya");
+document.write("Hi Priya"); // javascript doest not have document object(write) but browser has the document object
