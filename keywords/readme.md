@@ -74,3 +74,12 @@ Use Cases
 1. Debugging complex logic without manually setting breakpoints in DevTools.
 2. Pausing execution in loops or conditional branches for inspection.
 3. Debugging in environments where you can’t easily set breakpoints manually.
+
+
+....."true , false and null are technically not keywords it is a reserved identifier ".........
+
+
+
+            // ##############  strict Mode ###################
+
+            
