@@ -37,7 +37,7 @@ f1();                // show the error due to strict mode is applicable whole co
 
 // struct mode application only function..............................
 
-
+/*
 i=0;
 console.log(i);    // print "0" no error bcz strict mode is not applicable at globally
 
@@ -51,4 +51,40 @@ function f2(){
 }
 
 f2();
+
+*/
+
+
+/*
+//##############3 using struct mode duplication is not allow
+
+function f2(x,y){
+
+    console.log(x,y);
+}
+
+f2(3,4)  // output is 3 4
+
+
+// if we pass the same arguments
+
+function f1(x,x){
+
+    console.log(x,x);
+}
+
+f1(3,4);  // output is " 4 4" duplicates value
+*/
+
+
+// if we using strict mode..............
+
+"use strict"
+
+function f1(x,x){
+
+    console.log(x,x);
+}
+
+f1(3,4);    // show the error ........SyntaxError: Duplicate parameter name not allowed in this context
 
