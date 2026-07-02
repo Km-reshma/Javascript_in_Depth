@@ -126,6 +126,37 @@ let y = 3.14; // This will cause an error because y is not declared
 # What does 'use strict' mean in JavaScript?
 It is a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables. Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
 
+# Strict mode( future use keywords or reserve words)
+
+1. implemnets -> These are not currently used in javascript but reserved for future use 
+2. interface  -> similar
+3. protected  -> similar
+4. package    -> similar
+5. private    -> for identifier names
+6. public     -> These can be used only in strict mode
+7. static     -> similar
+8. let        -> let can be used without strict mode 
+
+Even if some of the keywords are not used today,  you should not use these as variable names to avoid compatability issues.
+
+# some keyword make only for the futures , these keywords are basically from Java language
+
+abstract
+boolean   
+byte
+char
+double
+final
+float
+goto
+int 
+long 
+native
+short 
+synchronised
+throws
+transient 
+volatile
 
 
 
