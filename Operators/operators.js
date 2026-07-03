@@ -68,7 +68,7 @@ d=(-2)**2;
 console.log(d);   //  4
 */
 
-
+/*
 //######## increment operators ......................................
 
 // post increment  ...............................
@@ -78,14 +78,37 @@ console.log(d);   //  4
 let a= 5;
 let x;
 x=a++;
-console.log(x,a);
+console.log(x,a);      // output is 5 6
 
 
 // pre- increment  ...............................
-// 1. First  increment the value of a = a++= 6
-// 2. Assign the increment value of a at the x.
+// 1. First  increment the value of b = ++b = 6
+// 2. Assign the increment value of b at the y.
+
+let b= 5;
+let y;
+y=++b;
+console.log(y,b);         // output is 6 6
+*/
+
+
+//######## decrement  operators ......................................
+
+// post decrement   ...............................
+// 1. assign the value of a =x=5 .
+// 2. then decrease the value of a = a--= 4
 
 let a= 5;
 let x;
-x=++a;
-console.log(x,a);
+x=a--;
+console.log(x,a);      // output is 5 4
+
+
+// pre- decrement  ...............................
+// 1. First  decrease the value of b = --b= 4
+// 2. Assign the increment value of b at the y.
+
+let b= 5;
+let y;
+y=--b;
+console.log(y,b);         // output is  4 4
