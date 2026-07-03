@@ -66,5 +66,26 @@ console.log(c);  // -4
 let d ;
 d=(-2)**2;                     
 console.log(d);   //  4
-
 */
+
+
+//######## increment operators ......................................
+
+// post increment  ...............................
+// 1. assign the value of a =x=5 .
+// 2. then increment the value of a = a++= 6
+
+let a= 5;
+let x;
+x=a++;
+console.log(x,a);
+
+
+// pre- increment  ...............................
+// 1. First  increment the value of a = a++= 6
+// 2. Assign the increment value of a at the x.
+
+let a= 5;
+let x;
+x=++a;
+console.log(x,a);
