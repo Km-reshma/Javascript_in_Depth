@@ -150,3 +150,18 @@ console.log(y);    // output is "NaN"  -> " not a number "
 
 
 */
+
+
+//some more assignment operators.................................
+
+let x=3;
+x/=2;
+console.log(x);               // 1.5
+
+let a=3;
+a%=2;
+console.log(a);              // 1
+
+let y=3;
+y**=2;
+console.log(y);              // 9
