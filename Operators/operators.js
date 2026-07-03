@@ -89,7 +89,7 @@ let b= 5;
 let y;
 y=++b;
 console.log(y,b);         // output is 6 6
-*/
+
 
 
 //######## decrement  operators ......................................
@@ -112,3 +112,41 @@ let b= 5;
 let y;
 y=--b;
 console.log(y,b);         // output is  4 4
+
+*/
+
+
+//############# Assignment Operators .........................................................
+
+//Two types = 1. simple assignment op  2. compound assignment operators
+/*
+let x;
+x=4;
+console.log(x);  // print the value of x which is copy value 
+
+
+let x;
+4=x;
+console.log(x);  // gives error bcz left side always variable not any constant number
+
+
+let a=5;
+let x;
+x=a+2;
+console.log(x);  // ouput is 7
+
+
+let y;
+y+=2;
+console.log(y);   // output is "NaN"  -> " not a number "
+                  // y is not a number means not defined any number
+
+// above example internally behave the concept of "undefined value"
+
+let y;
+y=undefined+2;
+console.log(y);    // output is "NaN"  -> " not a number "
+                  // y is not a number means not defined any number
+
+
+*/
