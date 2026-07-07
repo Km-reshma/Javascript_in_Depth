@@ -104,3 +104,4 @@ console.log(y==NaN);  // false, because NaN is not equal to any value, including
 
 //"NaN is a special value in JavaScript, it is a actual "Number Type" that represents "Not-a-Number". It is used to indicate that a value is not a valid number. However, NaN has some unique properties that can be confusing:
 // means jo bhi operation NaN ke sath kiya jata hai, woh meaningless hota hai ,wo hamesha NaN return karega. For example, 5 + NaN will return NaN, and Math.sqrt(-1) will also return NaN.
+
