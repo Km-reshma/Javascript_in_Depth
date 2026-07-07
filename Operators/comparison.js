@@ -62,3 +62,45 @@ Rule to remember.........................................
 If the string contains any invalid character (like a, b, @, etc.), the conversion fails and returns NaN.
 */
 
+/*
+
+let x ={name:"John", age:30};
+let y=x;
+console.log(x==y);  // true, because both x and y reference the same object in memory
+console.log(x===y); // true, because both x and y reference the same object in memory
+
+let z={name:"John", age:30};
+console.log(x==z);  // false, because x and z reference different objects in memory, even though their contents are the same
+console.log(x===z); // false, because x and z reference different objects in memory, even though their contents are the same
+
+//x is a variable thats strore the address of the object in memory, and y is another variable that stores the same address of the object. Therefore, x and y are equal (==) and strictly equal (===) because they point to the same object.
+// while z is a new object with the same contents as x, it is stored at a different memory address. Therefore, x and z are not equal (==) or strictly equal (===) because they point to different objects in memory.
+
+let d;
+console.log(0==false);  // true, because 0 is falsy and false is also falsy
+console.log(0===false); // false, because 0 is a number and false is a boolean, so they are not strictly equal
+
+let e ;
+console.log(0=="");  // true, because 0 is falsy and "" (empty string) is also falsy
+console.log(0===""); // false, because 0 is a number and "" is a string, so they are not strictly equal
+
+let f;
+console.log(0==null);  // false, because null is only equal to undefined and not equal to any other value
+console.log(0==undefined);  // false, because undefined is only equal to null and not equal to any other value
+console.log(null==undefined);  // true, because null and undefined are considered equal in non-strict comparison
+*/
+
+
+//   NaN....................................................
+
+let x;
+console.log(typeof NaN);  // output: "number", because NaN is a special numeric value that represents "Not-a-Number"
+
+console.log(0==NaN);  // false, because NaN is not equal to any value, including itself
+console.log(NaN==NaN);  // false, because NaN is not equal to any value, including itself
+
+let y =NaN;
+console.log(y==NaN);  // false, because NaN is not equal to any value, including itself
+
+//"NaN is a special value in JavaScript, it is a actual "Number Type" that represents "Not-a-Number". It is used to indicate that a value is not a valid number. However, NaN has some unique properties that can be confusing:
+// means jo bhi operation NaN ke sath kiya jata hai, woh meaningless hota hai ,wo hamesha NaN return karega. For example, 5 + NaN will return NaN, and Math.sqrt(-1) will also return NaN.
