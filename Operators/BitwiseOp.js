@@ -192,5 +192,21 @@ Output:   4
 
 */
 
+/*
+//  ############# binary represntation of a number #########------------------------------
+
+let a= 25;
+console.log(a);       //25    
 
 
+JavavaScript, the toString() method is used to convert a value (number, array, date, object, etc.) into its string representation
+"  value.toString([radix])  "
+radix (optional) — For numbers, specifies the base (2 to 36) for conversion.
+Example: num.toString(2) → binary string.
+
+*/
+let b  = 255;
+console.log(b.toString());    // "255" string
+console.log(b.toString(16));  // "ff" (hexadecimal)
+console.log(b.toString(2));   // "11111111" (binary)
+console.log(b.toString(10))   // 255  (decimal)
