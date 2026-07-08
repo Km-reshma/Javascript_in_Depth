@@ -109,5 +109,56 @@ console.log(false || false); // false
 console.log(5 > 10 || 2 < 4); // true
 console.log("Hi" || "Hello"); // "Hi" (truthy, stops here)
 
+
+let a = 5;
+let b = 6;
+let c = a>0 && b>0;
+console.log(c);             // output is "True " bcz both condition is true .
+
+
+let a = 5;
+let b = 6;
+let c = a<0 && b>0;
+console.log(c);              // // output is "False " bcz fist exp is false and second is true .
+
+
+
+let a = 5;
+let b = 6;
+let c = a<0 && ++b;
+console.log(c);                // false if first condition is failed then not check the second expression even if the second statement is True.
+console.log(a,b,c);            // 5 6 false    , b mein koi increment hoga hi nahi
+
+
+
+let a = 5;
+let b = 6;
+let c = a>0 && ++b;                
+console.log(c, b);                // 7 7 
+
+//  " If AND / OR Operator  --  two expression  first is true and second is also true but output depend the type of second expression 
+// we can see the above example c return the numeric value "7" because fisrt condition is true(boolean) but secon expression is numeric.
+
+
+
+
+let a = 5;
+let b = 6;
+let c = 0 && 5;                
+console.log(c);           // result is 0 because 0 is false then not go to next exp so return first experssion "0"
+
+
+
+let a = 5;
+let b = 6;
+let c = 2 && 5;                
+console.log(c);          // result is 5 because 2 is True(non zero) then go to next exp so return first experssion "5"
+                        // agar first coonditon trye hai then second condition bhi true hai to second con ka ans return karenge
+          
+                        
 */
 
+let a = 5;
+let b = 6;
+let c = 2 || null;                
+console.log(c);       // ouput is 2 
