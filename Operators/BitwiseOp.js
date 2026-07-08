@@ -1,3 +1,5 @@
+/*
+
 let a = 12 &  10;
 console.log(a);    // output is 8 
 
@@ -7,7 +9,7 @@ console.log(b);
 let c = 12 ^ 10;
 console.log(c); 
 
-/*
+
 why 8 is the output..............
 
 bcz we convert all above tw number into binary and perform "&" operator
@@ -59,3 +61,25 @@ A	B	A ^ B
 1	1	0
 
 */
+
+
+/*
+//  ############# bit wise not operator ###############
+
+#### First Method -
+Unary operator — flips all bits (including the sign bit).
+
+" Formula: ~x = -(x + 1)  "
+
+#### second method - 
+
+1. 1st ~(not) nikalo means opposite 0-->1 and 1-->0
+2. then 2's complement nikalo 
+
+
+
+let n=6;
+console.log(~n);   // -7   "explanation  -(n+1)""     or  " -(6+1) = -7 "
+
+*/
+                                   
