@@ -82,4 +82,73 @@ let n=6;
 console.log(~n);   // -7   "explanation  -(n+1)""     or  " -(6+1) = -7 "
 
 */
-                                   
+
+/*
+
+//  ########## Left Shift operator #######//////////
+
+JavaScript ka Left Shift Operator (<<) ek bitwise operator hai. Ye number ke binary bits ko left side shift karta hai.
+
+Syntax:
+" result = value << shiftCount;  "
+
+1. value → jis number ko shift karna hai.
+2. shiftCount → kitni positions left shift karni hain.
+
+
+JavaScript bitwise operators actually works on 32-bit binary numbers .
+
+What is Left Shift
+
+When we apply the left shift ...............
+
+1. Sare bits left move karte hain.
+2. Right side par 0 add hota hai.
+3. Left se jo bit bahar nikalti hai wo discard ho jati hai.
+
+Example:.........................
+console.log(5 << 1);
+
+5 ka binary     =        00000101
+Left shift by 1 =        00001010
+-------------------------------------------
+Ab decimal mein =             10
+
+Output -----> 10
+
+Har ek left shift ka matlab hota hai 2 se multiply.
+
+Example
+1. 5 << 1
+Means ,  5 * 2 = 10
+
+2. 5 << 2
+Means,   5 * 4 = 20
+
+3. 5 << 3
+Means,   5 * 8 = 40
+
+Formula
+
+"       x << n = x * (2ⁿ)        "
+
+
+10                    =     00000000 00000000 00000000 00001010
+1 left bit  shift     =     00000000 00000000 00000000 0001010_      //always zero placed so "00010100"=
+
+
+
+
+let a=10<<1;
+console.log(a);    // 20     "x*2=twice of x"   "10*2=20"
+
+let b=10<<2;
+console.log(b);    // 40
+
+let c=10<<3;
+console.log(c);   //80
+
+let d=10<<4;
+console.log(d);    // 160
+
+*/
