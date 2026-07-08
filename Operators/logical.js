@@ -156,9 +156,49 @@ console.log(c);          // result is 5 because 2 is True(non zero) then go to n
                         // agar first coonditon trye hai then second condition bhi true hai to second con ka ans return karenge
           
                         
-*/
 
 let a = 5;
 let b = 6;
 let c = 2 || null;                
 console.log(c);       // ouput is 2 
+
+
+
+let a = 5;
+let b = 6;
+let c = null || 5;             // "5"  bcz go to next 2nd exp bcz firts is null(means null treat as false)      
+console.log(c); 
+
+
+let a = 5;
+let b = 6;
+let c = null || null;             // "null"     second is also null
+console.log(c); 
+
+
+let a = 5;
+let b = 6;
+let c = false || "Hello";               // Hello bcz or operator  
+console.log(c); 
+
+
+
+let a = 5;
+let b = 6;
+let c = false && true || true;           // "true"  bcz first exp gives false the (false||true= true)    
+console.log(c); 
+
+
+
+
+let b=10;                  // 10 is non boolean type 
+
+let a=!!b;                / if koi vakue boolean type ki nahi hai to aap double not(!!) laga do vakue boolean type ki ho jayeg
+console.log(a,b);        // true 10
+
+*/
+let b=10;
+
+b = !!b;
+
+console.log(b);    // "True "......./ if koi vakue boolean type ki nahi hai to aap double not(!!) laga do vakue boolean type ki ho jayeg
