@@ -13,7 +13,7 @@ The ! operator returns true if the operand is false, and false if the operand is
 
           //############# 1.....Logical Not (!) Operators #####################
 
-          
+
 let a=5;
 let b=!a;
 console.log(a,b);    // out put : 5 false because a is 5 which is true and !a will return false
@@ -72,3 +72,42 @@ console.log(a,b);     // null True
 // undfined , null, NaN, Zero, Empty STring all these treat as the "False".
 
 */
+
+
+//              ############## AND(&&), OR(||) Operators ####################
+
+/*
+1. AND (&&)
+Returns true only if both operands are truthy.
+Short-circuits: If the first operand is falsy, it returns that value without checking the second.
+truth table -
+
+expression 1      expression 2      Result      
+ True              True              True
+ False             True              False
+ False             False             False
+ True              Fasle             False
+
+console.log(true && true);   // true
+console.log(true && false);  // false
+console.log(5 > 3 && 2 < 4); // true
+console.log(0 && "Hello");   // 0 (falsy, stops here)
+
+2. 2. OR (||)
+Returns true if at least one operand is truthy.
+Short-circuits: If the first operand is truthy, it returns that value without checking the second.
+
+xpression 1      expression 2      Result      
+ True              True              True
+ False             True              True
+ False             False             False
+ True              Fasle             True
+
+
+console.log(true || false);  // true
+console.log(false || false); // false
+console.log(5 > 10 || 2 < 4); // true
+console.log("Hi" || "Hello"); // "Hi" (truthy, stops here)
+
+*/
+
