@@ -204,9 +204,32 @@ JavavaScript, the toString() method is used to convert a value (number, array, d
 radix (optional) — For numbers, specifies the base (2 to 36) for conversion.
 Example: num.toString(2) → binary string.
 
-*/
+
 let b  = 255;
 console.log(b.toString());    // "255" string
 console.log(b.toString(16));  // "ff" (hexadecimal)
 console.log(b.toString(2));   // "11111111" (binary)
 console.log(b.toString(10))   // 255  (decimal)
+
+*/
+
+//         we want only the integer part not floating number.......................................
+
+let a =3.5;
+ b= Math.floor(a);
+ console.log(b);              // 3 bcz give the smallet floor value of that number 
+
+
+
+let x = -3.5;
+y= Math.floor(x);
+console.log(y);            // -4 bcz gives the smallest floor value 
+
+//so we use " Trunc() method "        to find the integer of that floating number.
+
+let p =-3.5;
+q= Math.trunc(p);
+console.log(q);            //-3 
+
+
+
