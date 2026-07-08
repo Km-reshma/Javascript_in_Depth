@@ -152,3 +152,45 @@ let d=10<<4;
 console.log(d);    // 160
 
 */
+
+/*
+// ###### right sgift operators--------------------------------------------------------------------
+
+let a=10>>1;
+console.log(a)    // 5
+
+let b=10>>2;
+console.log(b);    // 2
+
+let c=10>>3;
+console.log(c);   //1
+
+let d=10>>4;
+console.log(d);    // 0
+
+let e=10>>6;
+console.log(e);    // 0
+
+
+Right Shift Operator (>>) in JavaScript ..................
+
+Right Shift (>>) ek bitwise operator hai jo number ke bits ko right side shift karta hai.
+
+Syntax:-------------------
+result = value >> shiftCount;
+value → jis number ko shift karna hai.
+shiftCount → kitni positions right shift karni hain.
+
+Example ..............
+console.log(8 >> 1);
+
+Binary of 8:               00001000
+
+Right shift by 1:          00000100              //4
+
+Output:   4
+
+*/
+
+
+
