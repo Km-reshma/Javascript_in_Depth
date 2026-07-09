@@ -68,3 +68,13 @@ let result = age >= 18 ? "Adult" : "Minor";
 
 console.log(result);                                // Adult
 */
+
+// ############ comma (,) operator ################___________________________________________________________
+//The comma operator (,) evaluates multiple expressions(or elements) from left to right and returns the value of the last expression(or last element).
+//the comma operator evaluates all expressions, but only the last expression's value is returned. It is used rarely in JavaScript.
+
+let a =(1,2,3);
+console.log(a);                                //3
+
+let b = (2 + 3, 4 + 5);
+console.log(b);                               // 9
