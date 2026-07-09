@@ -21,7 +21,7 @@ console.log(arr instanceof Date);   // false
 
 console.log(Array.isArray(arr));   // true
 
-*/
+
 // ############### " in " operator ##############________________________________________________________
 //"in" is a relational operator in JavaScript. It checks whether a property exists in an object.
 
@@ -31,5 +31,27 @@ let p1={
     
 };
 console.log(p1);
-console.log("name" in p1);
-console.log("city" in p1);
+console.log("name" in p1);  // true
+console.log("city" in p1);  // false
+
+
+
+// ########## delete operators ##################______________________________________________________
+// "delete " is a unary operator in JavaScript. It removes a property from an object.
+// delete op in object..............................
+let p1={
+    name:"Reshma",
+    age:"24"
+    
+};
+
+console.log(p1);    //{ name: 'Reshma', age: '24' }
+delete p1.age;
+console.log(p1);    // { name: 'Reshma' }
+
+// delete  op in array................................
+let a =[10,20,30];
+delete a[0];
+console.log(a);      // [ <1 empty item>, 20, 30 ] this is posssible in js not other language;
+
+*/
