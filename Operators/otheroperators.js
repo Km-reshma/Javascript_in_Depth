@@ -54,4 +54,17 @@ let a =[10,20,30];
 delete a[0];
 console.log(a);      // [ <1 empty item>, 20, 30 ] this is posssible in js not other language;
 
+
+
+// ########3 Ternary Operator(conditional ) ############_____________________________________________
+//The ternary operator (?:) is a conditional operator in JavaScript. It is a shorthand for if...else.
+//Syntax:
+//condition ? expression1 : expression2;
+//if condition is true goes to exp1 else goes to exp2;
+
+let age = 20;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);                                // Adult
 */
