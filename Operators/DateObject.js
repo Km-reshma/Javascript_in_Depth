@@ -32,4 +32,51 @@ console.log(d2)              //2026-06-09T00:00:00.000Z
 //######## Another way ######_______________________________________________________________________________
 
 let d3 = new Date(2026,6,9);
-console.log(d3);
+console.log(d3);               // 2026-07-08T18:30:00.000Z// by defualt consider karta hai 
+
+
+//______________________________________________________________________________________________________________
+
+//                 ######## Get Method in Date Object ###########...........................................
+
+/* 
+| Method                | Kya return karta hai                                   |
+_______________________________________________________________________________
+
+  `getDate()`           | Month ki date (1–31)                                   |
+| `getDay()`            | Week ka day (0–6), **0 = Sunday**                      |
+| `getFullYear()`       | Full year (e.g., 2026)                                 |
+| `getMonth()`          | Month (0–11), **0 = January**                          |
+| `getHours()`          | Hours (0–23)                                           |
+| `getMinutes()`        | Minutes (0–59)                                         |
+| `getSeconds()`        | Seconds (0–59)                                         |
+| `getMilliseconds()`   | Milliseconds (0–999)                                   |
+| `getTime()`           | 1 Jan 1970 se ab tak ke milliseconds (timestamp)       |
+| `getTimezoneOffset()` | UTC aur local time ke beech ka difference (minutes me) |
+__________________________________________________________________________________
+
+console.log(d1);                  //2026-07-09T11:38:26.135Z    5 hour and 30 min pahle ka time dikha rha hai bcz global time
+
+console.log(d1.getFullYear());   // 2026
+console.log(d1.getMonth());      // 6        bcz start 0-jan and end 11-dec
+console.log(d1.getDay());        //4         similar 0- sunday and 6- saturday 
+console.log(d1.getDate());       // 9
+console.log(d1.getTime());        // 1783597106135  total milisec from i jan 1970 se ab tak ke miliseconds
+console.log(d1.getHours());       //17
+console.log(d1.getMinutes());     //8
+console.log(d1.getSeconds());     //26
+console.log(d1.getMonth());       //6
+
+*/
+
+// ##### we also find all these time anither waylike__________________________________________________
+
+console.log(d1.getTime());               //output: 1783597862316        // get the time in miliseconds by default
+console.log(d1.getTime()/1000);          //output: 1783597862.316       // divide by 1000 to get the time in seconds
+console.log(d1.getTime()/1000/60);       //output: 29726631.0386        //divide by 60 to get the time in minutes
+console.log(d1.getTime()/1000/60/60);    //output: 495443.85064333334   // divide by 60 to get the time in hours
+console.log(d1.getTime()/1000/60/60/24); //output: 20643.493776805557   // divide by 24 to get the time in days
+
+
+
+
