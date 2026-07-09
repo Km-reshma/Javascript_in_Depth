@@ -58,16 +58,14 @@ console.log(a);      // [ <1 empty item>, 20, 30 ] this is posssible in js not o
 
 // ########3 Ternary Operator(conditional ) ############_____________________________________________
 //The ternary operator (?:) is a conditional operator in JavaScript. It is a shorthand for if...else.
-//Syntax:
+//Syntax:......................................
 //condition ? expression1 : expression2;
 //if condition is true goes to exp1 else goes to exp2;
 
 let age = 20;
-
 let result = age >= 18 ? "Adult" : "Minor";
-
 console.log(result);                                // Adult
-*/
+
 
 // ############ comma (,) operator ################___________________________________________________________
 //The comma operator (,) evaluates multiple expressions(or elements) from left to right and returns the value of the last expression(or last element).
@@ -78,3 +76,89 @@ console.log(a);                                //3
 
 let b = (2 + 3, 4 + 5);
 console.log(b);                               // 9
+*/
+
+// ################## Spread Operators (...iterable) at array ###########_____________________________________________________________
+//The spread operator (...) expands an iterable (such as an array or string) or an object into individual elements or properties.
+
+/*   #########3 without spread _______________________________________________________________________-
+a ans b same ek array ko hi refer kar rha hai  or 2 refer refer banega.
+Haan, bilkul. Is code mein a aur b dono same array ko refer kar rahe hain.
+
+let a = [10, 20, 30];
+let b = a;
+console.log(b);                   // [10, 20, 30]
+
+Memory mein ye hota hai:
+Array: [10, 20, 30]           
+        │        │
+        a        b
+
+a ek array ko point karta hai.
+b = a karne se naya array nahi banta.
+Sirf ek aur reference (b) usi array ko point karne lagta hai.
+
+Isliye agar b se array change karoge:
+
+b[0] = 100;
+console.log(a);                      //   [100, 20, 30]
+console.log(b);                      //   [100, 20, 30]
+
+Dono mein change dikhega, kyunki array ek hi hai, references do hain.
+
+
+//____________________________________________________________________________________________
+
+
+//Agar alag (copy) array banana ho, to spread operator use karo:
+
+let a = [10, 20, 30];
+let b = [...a];
+
+console.log(a);                 // [10, 20, 30]
+console.log(b);                 // [10, 20, 30]
+
+//Yahan a aur b do alag arrays hain.
+
+//if we change in b doest not any changes happens in a  , so a nad we both are two different Array.
+
+b[0] = 100;
+
+console.log(a);                // [10, 20, 30]
+console.log(b);                // [100, 20, 30]
+
+*/
+
+
+
+// #########   Spread Operators (...iterable) at "Array" ###########_____________________________________________________________
+
+function f1(x, y, z) {
+    return (x + y + z);
+}
+
+let a = [10, 20, 30];
+
+console.log(f1(a[0], a[1], a[2]));               // 60
+
+//instead of written  console.log(f1(a[0], a[1], a[2])); entire this line we use spread operator like "f1(...a) "
+
+console.log(f1(...a));                            // 60
+
+// examplle 3___________________________________-__________________________________________
+
+let p1={
+    name:"Reshma",
+    age:"24"  
+};
+//we want to p1 int0 p2
+
+let p2={
+    ...p1,
+    city: "Noida" 
+
+};
+
+console.log(p1);         //  { name: 'Reshma', age: '24' }
+
+console.log(p2);         //   { name: 'Reshma', age: '24', city: 'Noida' }
