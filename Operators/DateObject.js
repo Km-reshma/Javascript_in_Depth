@@ -67,7 +67,7 @@ console.log(d1.getMinutes());     //8
 console.log(d1.getSeconds());     //26
 console.log(d1.getMonth());       //6
 
-*/
+
 
 // ##### we also find all these time anither waylike__________________________________________________
 
@@ -77,6 +77,86 @@ console.log(d1.getTime()/1000/60);       //output: 29726631.0386        //divide
 console.log(d1.getTime()/1000/60/60);    //output: 495443.85064333334   // divide by 60 to get the time in hours
 console.log(d1.getTime()/1000/60/60/24); //output: 20643.493776805557   // divide by 24 to get the time in days
 
+*/
 
+
+//______________________________________________________________________________________________________________________________
+
+// #### Value Set method in Date Object #############----------------------------------------------------
+//JavaScript ke Date object me set methods date aur time ki values ko modify (change) karne ke liye use hote hain.
+
+
+/*
+Local Time set Methods_
+__________________________________________________________________
+| Method              | Kya set karta hai                         |
+| ------------------- | ----------------------------------------- |
+| `setDate()`         | Month ki date (1–31)                      |
+| `setFullYear()`     | Year                                      |
+| `setMonth()`        | Month (0–11)                              |
+| `setHours()`        | Hours (0–23)                              |
+| `setMinutes()`      | Minutes (0–59)                            |
+| `setSeconds()`      | Seconds (0–59)                            |
+| `setMilliseconds()` | Milliseconds (0–999)                      |
+| `setTime()          | Timestamp (milliseconds since 1 Jan 1970) |
+___________________________________________________________________
+*/
+
+let d4 = new Date();
+
+console.log(d4.setFullYear(2026));     // 1783598829741            Ye numbers milliseconds since 1 Jan 1970 hote hain.
+console.log(d4.setMonth(6));           // 1783598829741
+console.log(d4.setDate(1));            // 1782907629741
+console.log(d4.setHours(10));          // 1782882429741
+console.log(d4.setMinutes(30));        // 1782882009741
+//console.log(d3.setDay());            // ye method work nahi krta bcz we cant change the actual date
+
+console.log(d4);                       //2026-07-01 T05:00:09.741Z
+
+
+// ___________________________________________________________________________________________________________
+
+// ######## use toLocalString Method ######################..............................................
+//JavaScript me toLocaleString() methods date, time, aur numbers ko user ki locale (language + region) ke format me display karne ke liye use hote hain.
+
+console.log(d4.toLocaleString());       //   1/7/2026, 10:30:48 am
+
+// we pass the obj4ect yo modified the format of date and time 
+
+console.log(d4.toLocaleString('default'));      //   1/7/2026, 10:30:48 am
+
+console.log(d4.toLocaleString('default',{
+     
+    weekday:'long',
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+
+}));             // Wednesday, 01 July 2026
+
+//_______________________________________________________________________
+
+//2.toLocaleDateString().............................................
+//Sirf date return karta hai.
+
+const date1 = new Date();
+console.log(date1.toLocaleDateString());                     // 9/7/2026    
+
+//_______________________________________________________________________________
+//3. Locale specify kar sakte ho
+
+const date2 = new Date();
+console.log(date2.toLocaleDateString("en-IN"));                // 9/7/2026
+
+const date8 = new Date();
+console.log(date2.toLocaleDateString("en-Us"));                  //7/9/2026  forat change standard format
+
+//____________________________________________________________________________
+//4. toLocaleTimeString()
+//Sirf time return karta hai.
+
+const date3 = new Date();
+
+console.log(date3.toLocaleTimeString());                    //6:04:21 pm
 
 
