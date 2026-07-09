@@ -127,8 +127,6 @@ b[0] = 100;
 console.log(a);                // [10, 20, 30]
 console.log(b);                // [100, 20, 30]
 
-*/
-
 
 
 // #########   Spread Operators (...iterable) at "Array" ###########_____________________________________________________________
@@ -162,3 +160,43 @@ let p2={
 console.log(p1);         //  { name: 'Reshma', age: '24' }
 
 console.log(p2);         //   { name: 'Reshma', age: '24', city: 'Noida' }
+*/
+    
+
+//########( ?? ) Nullish Coalescing Operator ######### _____________________________________________________
+//Agar left side ki value null ya undefined hai, to right side ki value use karo. Warna left side ki value hi use karo.
+/*
+let name = null;
+console.log(name ?? "Guest");    // Guest
+
+explanation : Kyuki name ki value null hai, isliye "Guest" print hua.
+
+*/
+
+/*
+//without nullish operator-..........................
+
+let a =135;
+let b=" Anything write";
+let c;
+if(a === null || a === undefined){
+    c=b;
+}
+else{
+    c=a;
+}
+
+console.log(c);         // out put is 135;
+console.log(c);         // agar  a = null ; then c meib b ki valuue print hoti "Anything Written"
+
+
+// with nullish _________________________________________
+
+let a =null;
+let b=" Anything write";
+let c= a ?? b;
+console.log(c)                   //  output: Anything write
+*/
+
+
+
