@@ -200,3 +200,36 @@ console.log(c)                   //  output: Anything write
 
 
 
+//  ######### optional chain (?.) operator ###############_____________________________________________________________
+
+// The ?. operator, called the optional chaining operator, is used in programming (like JavaScript) to safely access properties of an object without causing errors if something is null or undefined.
+//Normally, agar aap kisi object ka property check karte ho aur wo object null ya undefined ho, toh error aata hai.
+//?. lagane se, agar object nahi hai toh error nahi aayega, bas undefined return karega.
+
+//without ?. operator ............
+
+let p1={
+    name :"Alice",
+    age: 45,
+    address: {
+        firstline: "A-201 Tower A",
+        secondLine: "Sector-8",
+        city:" Laxmi Nagar",
+        State: "Delhi",
+        Pincode: "1100060",
+    },
+    greet(){
+        return "Hello";
+    } 
+};
+//console.log(p1);              // whole print p1 object 
+//console.log(p1.address);      // only addresse
+//console.log(p1.greet());      // Hello 
+//console.log(p1.address.city);  // Laxmi Nagar
+
+
+// if we accese the property of an object which has not so gives error without this ?. operator 
+
+//console.log(p1.address.mobile.surname);  //TypeError: Cannot read properties of undefined (reading 'surname') 
+
+console.log(p1.address?.mobile?.surname);  // no erroe gives undefined
