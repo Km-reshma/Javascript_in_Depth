@@ -37,11 +37,35 @@ if(x>0){
 else{
     console.log("negative");
 }
-*/
+
 
 //___________________################      ?. ternary      ###############____________________________
 
 // Syntax: comdition ? Expression1 : Epression2
 
 let x=-25;
-(x > 0) ? console.log("positive") : console.log("negative") ;
+(x > 0) ? console.log("positive") : console.log("negative") ;  // negative
+
+//or 
+
+console.log((x > 0) ? "positive" : "negative");       // negative
+
+
+//___________________################      if-else-if (ladder)      ###############____________________________
+
+let marks=78;
+if(marks>=90){
+    console.log("Grade-A");
+}
+else if(marks>=75){
+    console.log("Grade-B");
+}
+else{
+    console.log("Grade-C"); 
+}
+
+//output : Garade-B
+
+*/
+
+//___________________################      Switch      ###############____________________________
