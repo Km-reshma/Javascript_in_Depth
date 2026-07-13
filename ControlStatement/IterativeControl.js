@@ -50,6 +50,8 @@ while(i<=arr.length){
     i++;
 }
 */
+
+/*
 //_________________________######### Continue Statement ###################_____________________________________
 
 
@@ -66,7 +68,9 @@ for( let i=0;i<=arr.length-1; i++){
     console.log(arr[i]);       // 11 22 89 77 81 
 }
 
-/*
+*/
+
+
 
 // ________________________######### Return Statement #########__________________________________________
 
@@ -76,12 +80,14 @@ for( let i=0;i<=arr.length-1; i++){
 //syntax
 function f1(){
     return "something" ;
-
 }
+console.log(f1());          // something
 
-example- 
+//example- 
+
 function add(a,b){
     return a+b;
 }
+console.log(add(4,5));       //9
 
-*/
+
