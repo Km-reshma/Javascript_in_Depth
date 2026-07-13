@@ -43,13 +43,46 @@ while(i<=5){
      i++;
 }
 
+let i = 0;
+while (i < 5) {
+console.log(i);                     // 0 1 2 3 4
+i++;                                
+} 
+
+let i = 0;
+while (i < 5) {
+   if (i === 3) 
+      break;   
+   console.log(i);    // 0 1 2 when i == 3 aayega then uske bad loop exit cho jayega 
+   i++;
+}
+
+
+// _____________________############# do-while loop ##############_____________________________________________
+
+//A variant of the while loop is the do-while loop, which executes the code block once before checking the condition
+
+let arr =[10,20,30,40,50];
+let j=0;
+while(j<=5){
+     console.log(arr[j]);      // 10 20 30 40 50
+    j++;
+}
+
+
+let i = 0;
+do {
+console.log(i);             // 0 1 2 3 4 
+i++;
+} while (i < 5);
+
+##################### differnce b/w while and do while loop.
+
+"" while loop: Condition is checked before executing the loop body. If the condition is false initially, the loop body may never execute.
+
+"" do-while loop: Loop body executes at least once, then the condition is checked.  ""
+
 */
-
-
-
-
-
-
 
 /*
 //______________################ Break Statement #################___________________________________________
