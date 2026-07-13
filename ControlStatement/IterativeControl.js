@@ -24,11 +24,32 @@ A while loop in JavaScript repeatedly executes a block of code as long as a spec
 To avoid infinite loops. Ensure the condition will become false.  
 If you forget to increment i, the loop will run indefinitely and crash your browser.
 
-let i =1;
+syntax-
+
+i=0;                            // initialization
+while(condition){               // condition
+    
+     block statement
+
+     i++                        // flow like increment 
+}
 
 
+// example -
+let arr =[10,20,30,40,50];
+let i=0;
+while(i<=5){
+     console.log(arr[i]);
+     i++;
+}
 
 */
+
+
+
+
+
+
 
 /*
 //______________################ Break Statement #################___________________________________________
@@ -71,7 +92,7 @@ for( let i=0;i<=arr.length-1; i++){
 */
 
 
-
+/*
 // ________________________######### Return Statement #########__________________________________________
 
 
@@ -91,3 +112,4 @@ function add(a,b){
 console.log(add(4,5));       //9
 
 
+*/
