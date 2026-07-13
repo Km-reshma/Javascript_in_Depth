@@ -25,8 +25,13 @@ To avoid infinite loops. Ensure the condition will become false.
 If you forget to increment i, the loop will run indefinitely and crash your browser.
 
 let i =1;
+
+
+
 */
 
+/*
+//______________################ Break Statement #################___________________________________________
 
 // break exits the nearest enclosing loop or switch
 //control exits kar deta means loop 
@@ -36,13 +41,47 @@ let i=0;
 
 while(i<=arr.length){
     
-    console.log(i);
+    console.log(arr[i]);
 
-    if(arr[i]%2==0){               // 0 1 2 3 then break
-        break;
+    if(arr[i]%2==0){               // 11 27 89 62 then breakgit 
+        break;                      // jb even number then ruk jana means us block se nikle jana
     }
 
     i++;
 }
+*/
+//_________________________######### Continue Statement ###################_____________________________________
 
 
+//Skip the current iteration and moves to the next one .
+
+let arr = [11,27,89,62, 77, 81,26];
+
+for( let i=0;i<=arr.length-1; i++){
+
+    if(arr[i]%2==0){
+        continue;              // even aaye usko skip kr ke continue ke do 
+    }
+
+    console.log(arr[i]);       // 11 22 89 77 81 
+}
+
+/*
+
+// ________________________######### Return Statement #########__________________________________________
+
+
+// return statement     - are used inside the functions to return a value and exit the functions.
+
+//syntax
+function f1(){
+    return "something" ;
+
+}
+
+example- 
+function add(a,b){
+    return a+b;
+}
+
+*/
