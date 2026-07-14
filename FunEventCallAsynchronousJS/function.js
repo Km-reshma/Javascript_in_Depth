@@ -338,3 +338,36 @@ const add = function(a, b)                  //A function is assigned to add.
 console.log(add(10,29));                       // 39
 
 */
+
+
+
+/*
+
+// ______________________ ########## Arrow Function ##############______________________________________
+
+An arrow function is a shorter syntax for writing functions in JavaScript. It was introduced in ES6 (ECMAScript 2015) and is commonly used for cleaner and more concise code.
+
+A new way to write functions using the => syntax. 
+
+Syntax-------------------------------
+
+// Traditional function
+function add(a, b) {
+  return a + b;
+}
+
+//Arrow function'
+let add = (a,b) => 
+{ 
+      return a+b;
+
+}
+console.log(add(10,20));
+
+
+//Shorter Syntax of arrow function
+// If the function has only one expression, you can omit the braces {} and the return keyword.
+let add =(a,b) => a+b;
+console.log(add(20,60));
+
+*/
