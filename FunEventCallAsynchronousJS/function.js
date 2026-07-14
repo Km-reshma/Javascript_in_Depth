@@ -40,4 +40,76 @@ function add(a, b)
 
 //Function Call
 add(10, 20)
-  
+
+
+
+//___________________##### Classification of Function Based on parameters and return ____________________________
+
+
+The classification of functions into 4 types is based on whether a function accepts input (parameters) and whether it sends output back (return value).
+
+    
+                                            Function
+                                               │
+                                ┌──────────────┼──────────────┐
+                                │              │              │
+                          No Parameters   Parameters    Return Value
+                           No Return       No Return      Yes/No
+
+
+
+Type 1: Function with No Parameters and No Return Value________________________________________________
+
+A function that does not accept any parameters and does not return any value.
+It simply performs a task when it is called. 
+
+function welcome() {
+    console.log("Welcome to JavaScript");
+}
+
+welcome();
+
+
+
+
+Type 2: Function with Parameters but No Return Value_______________________________________________________
+
+A function that accepts one or more parameters but does not return any value.
+Instead of returning data, it usually displays or processes the received information.
+
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("Alice");
+
+
+
+
+Type 3: Function with No Parameters but Return Value__________________________________________________
+
+A function that does not accept any input but returns a value.
+The value is usually calculated or obtained internally.
+
+function getCurrentYear() {
+    return 2026;
+}
+let year = getCurrentYear();
+console.log(year);
+
+
+
+
+Type 4: Function with Parameters and Return Value________________________________________________________
+
+A function that accepts parameters and returns a value after processing.
+This is the most commonly used function type in programming.
+
+
+function add(a, b) {
+    return a + b;
+}
+let result = add(10, 20);
+console.log(result);
+
+
