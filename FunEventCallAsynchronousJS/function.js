@@ -50,6 +50,128 @@ function add(a, b)
 add(10, 20)
 */
 
+
+//______________########## Why are functions called first-class objects #########____________________________________
+
+Functions are called first-class objects because they are treated like any other value. 
+They can be assigned to variables, passed as arguments, returned from other functions, stored in arrays and objects,
+and they have their own properties and methods.
+
+Internally, every function is a special type of object with an internal [[Call]] capability, which makes it callable.
+
+Every function is an object.
+Not every object is a function
+
+
+JavaScript me function ek special object hota hai. 
+Isliye function ko hum first-class object ya first-class citizen bolte hain.
+
+Agar kisi value ko variable me store kar sakte ho, function ke argument ke roop me pass kar sakte ho,
+kisi function se return kar sakte ho, aur uske properties aur methods ho, 
+to us value ko first-class kehte hain.
+JavaScript me function ye sab kar sakta hai, isliye function first-class object hai.
+
+lets take an example to understand this--------------------------------------------------
+
+Suppose tumhare paas ek number hai.
+
+let x = 10;
+
+Tum is number ko------------------------------------------
+1. Variable me store kar sakte ho. 
+2. Dusre function me pass kar sakte ho 
+3, Return kar sakte ho 
+JavaScript functions bhi bilkul isi tarah behave karte hain.
+
+
+1. Function ko Variable me Store kar sakte hain__________________________________________________
+
+const greet = function () {
+    console.log("Hello");
+};
+
+greet();                               //ouput : "Hello"
+
+
+2. Function ko Argument ke roop me Pass kar sakte hain_______________________________________________________
+************  Isse callback function bhi kehte hain.
+
+function hello() {
+    console.log("Hello");
+}
+
+function execute(fn) {
+    fn();
+}
+
+execute(hello);
+
+
+3. Function ko Return bhi kar sakte hain_______________________________________________________
+
+function outer() 
+{
+    return function () 
+    {
+        console.log("Inner Function");
+    };
+
+}
+
+const result = outer();                             //Yahan function ne dusra function return kiya.
+                                                   //  Ye bhi first-class object ki property hai.
+result();                                          //output is : Inner Function
+
+
+
+4. Function Object ke andar Store ho sakta hai____________________________________________________
+
+const person = {
+
+    name: "Rahul",
+
+    greet: function () {
+        console.log("Hello");
+    }
+
+};
+
+person.greet();       // Hello
+
+
+
+
+5. Function Array ke andar bhi Store ho sakta hai______________________________________________________________
+
+function add() {
+    console.log("Additiom");
+}
+
+function subtract() {
+    console.log("Subtraction");
+}
+
+const arr = [add, subtract];
+
+arr[0]();             // addution
+arr[1]();             //Subtraction
+
+
+
+6. Function ki Apni Properties Hoti Hain______________________________________________________________________
+
+function greet(a, b) {}
+
+console.log(greet.name);                     // name -Function ka naam batata hai.
+console.log(greet.length);                   // length- Kitne parameters hain, woh batata hai
+
+Output
+greet
+2
+
+
+
+
 /*
 //___________________##### Classification of Function Based on parameters and return ____________________________
 
@@ -186,3 +308,10 @@ function greet() {
 greet();
 
 */
+
+
+//_______________________#######  Function Expression  ###########__________________________________________________
+
+A Function Expression is a way of creating a function by assigning it to a variable.
+Unlike a function declaration, the function becomes available only after the assignment is executed.
+
