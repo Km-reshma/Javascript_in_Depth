@@ -13,7 +13,7 @@ Syntax of function:-
 
 //keyword  function_name
     |    |      _____________Parameters
-    |    |     |                              */
+    |    |     |                             
 function sum (x,y){
 
     return x+y;               // function body andy return keyword
@@ -22,3 +22,22 @@ function sum (x,y){
 let result = sum(4,5);        // (4,5) as an arguement
   //            |_____________  function call
 console.log(result);
+
+*/
+
+//___________#########  Parameters and Arguements  #########___________________________________
+
+Parameters -A parameter is a variable listed in the function definition. It acts as a placeholder for the value that will be passed when the function is called.
+
+Arguements - An argument is the actual value you pass to the function when calling it.
+
+//Function Definition
+function add(a, b)
+//function body 
+{
+    return a+b;
+}
+
+//Function Call
+add(10, 20)
+  
