@@ -25,6 +25,7 @@ console.log(result);
 
 */
 
+/*
 //___________#########  Parameters and Arguements and Return   #########___________________________________
 
 Parameters -A parameter is a variable listed in the function definition. It acts as a placeholder for the value that will be passed when the function is called.
@@ -38,8 +39,6 @@ Return Statement-
 
 
 
-
-
 //Function Definition
 function add(a, b)
 //function body 
@@ -49,9 +48,9 @@ function add(a, b)
 
 //Function Call
 add(10, 20)
+*/
 
-
-
+/*
 //___________________##### Classification of Function Based on parameters and return ____________________________
 
 
@@ -120,5 +119,70 @@ function add(a, b) {
 }
 let result = add(10, 20);
 console.log(result);
+*/
 
 
+
+/*
+// ____________________ ######## Types Of Functions ###############______________________________________________
+
+1. Function Declaration (name function)
+2. Function Expression
+3. Arrow Function 
+4. Default parameters 
+5. Anonymous Function 
+6. Immediately, Invoke function, expression function 
+7. arguement object 
+8. constructor object
+9. generator function 
+10. Async function
+*/
+
+/*
+//___________-#######  Named Function (Function Declaration)  ###########___________________________
+
+A named function is a function that has an identifier (name). 
+The name is used to call the function, refer to it, or identify it during debugging and recursion.
+A named function is any function that is declared with a specific name.
+
+
+Function Declaration____________________________________________________________
+
+A Function Declaration is the most common way to define a function in JavaScript. 
+It creates a named function that can be called anywhere within its scope because function declarations are hoisted.
+"   It defines the function before it is executed.    " 
+
+
+//Example of function declaration---------------------------
+hello();
+
+function hello() {
+
+    console.log("Hello");
+
+}
+
+
+Syntax of Named Function-------------------------
+function functionName(parameters) {
+    // function body
+}
+
+
+
+1. function → JavaScript keyword
+2. functionName → Name (identifier) of the function
+3. parameters → Optional input values
+4. {} → Function body
+
+
+//Example of Named Function--------------------
+
+function greet() {
+
+    console.log("Hello");
+}
+
+greet();
+
+*/
