@@ -48,7 +48,7 @@ function add(a, b)
 
 //Function Call
 add(10, 20)
-*/
+
 
 
 //______________########## Why are functions called first-class objects #########____________________________________
@@ -168,7 +168,7 @@ console.log(greet.length);                   // length- Kitne parameters hain, w
 Output
 greet
 2
-
+*/
 
 
 
@@ -306,12 +306,35 @@ function greet() {
 }
 
 greet();
-
 */
 
 
+
+/*
 //_______________________#######  Function Expression  ###########__________________________________________________
+
+
+Why Is It Called a Function Expression?
+Because the function is created inside an expression.
 
 A Function Expression is a way of creating a function by assigning it to a variable.
 Unlike a function declaration, the function becomes available only after the assignment is executed.
+Syntax----------------
 
+const variableName = function(parameters) 
+{
+    // function body
+};
+
+//Example----------------------------------------
+const message = "Hello";                    //"Hello" is assigned to message
+const number = 100;                         //100 is assigned to number.
+
+const add = function(a, b)                  //A function is assigned to add.
+{
+    return a + b;
+};
+
+console.log(add(10,29));                       // 39
+
+*/
