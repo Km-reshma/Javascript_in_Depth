@@ -371,3 +371,35 @@ let add =(a,b) => a+b;
 console.log(add(20,60));
 
 */
+
+
+
+
+/*
+//_____________________########## Anonymous Function #############_____________________________________
+
+An anonymous function in JavaScript is a function without a name. It is usually created and used directly where it is needed, often as a callback or a one-time function.
+
+syntax----------------------------------
+
+function () 
+{
+  // function body
+}*/
+
+
+//Unlike a normal function:----------------
+let greet2 = function greet() {
+  console.log("Hello");
+}
+greet2();                                 // Hello
+
+
+
+//an anonymous function has no function name:
+const greet1 = function () {
+  console.log("Hello World");
+};
+greet1();                                   // Hello World
+
+
