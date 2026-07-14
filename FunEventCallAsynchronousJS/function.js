@@ -25,11 +25,20 @@ console.log(result);
 
 */
 
-//___________#########  Parameters and Arguements  #########___________________________________
+//___________#########  Parameters and Arguements and Return   #########___________________________________
 
 Parameters -A parameter is a variable listed in the function definition. It acts as a placeholder for the value that will be passed when the function is called.
 
 Arguements - An argument is the actual value you pass to the function when calling it.
+
+Return Statement-
+1. The return statement is used to send a result back from a function.
+2. When return executes, the function stops running at that point.
+3. The returned value can be stored in a variable or used directly.
+
+
+
+
 
 //Function Definition
 function add(a, b)
