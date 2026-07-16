@@ -224,3 +224,38 @@ Stack
 └──────────────┘
 
 */
+
+
+
+
+
+
+
+
+
+/*
+
+//____________________######## Aynschronous JavaScript ##############________________________
+
+
+if we create a fuction, whose task is to fetch the data from the server and display on the page.
+function takes too much  the time  for fetch the data from the server .then your page un-responsible ho jayega,
+bcz aapka aage ki code ki line nahi chalegi jab tak previous task complete na ho jaye .
+
+so this problem is resolved by the concept of "asynchronous javascript".
+
+
+Asynchronous means -->  Don't stop execution.
+Continue running other code while waiting for a task to complete.
+
+
+JavaScript was created in 1995 to make web pages interactive.
+Users click  ---> JavaScript reacts
+User clicks again  ---> JavaScript reacts
+The browser must always remain responsive.
+
+Imagine clicking a button and the page freezes for 10 seconds because JavaScript is downloading an image.
+That would be terrible.
+So JavaScript never waits for long tasks.
+
+*/
