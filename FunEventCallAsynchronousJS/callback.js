@@ -1,7 +1,7 @@
 // __________________________###### CallBack Function ########___________________________________________
 
 //lets take and example-
-
+/*
 function f1(){
     console.log("Hello ");
     
@@ -9,4 +9,15 @@ function f1(){
 function f2(callback){
     callback();             // f1= call back 
 }
-f2(f1);                    // JavaScript kehta hai ki call back function f1 which is pass an arguement as f2 like f2(f1):     callback = f1
+f2(f1);  */                  // JavaScript kehta hai ki call back function f1 which is pass an arguement as f2 like f2(f1):     callback = f1
+
+//---------or 
+
+
+function f2(callback){
+    callback();             // f1= call back 
+}
+
+f2(function () {                 // anonymous function ()
+    console.log("Hello");
+});
