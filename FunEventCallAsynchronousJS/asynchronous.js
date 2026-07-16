@@ -68,22 +68,28 @@ Only one piece of JavaScript code executes at one moment
 
 
 
-*/  
+*/ 
 
 
 
- _________________________                                    Brows
+/*
+
+    Js Engine
+
+ _________________________                                    Browser: is a software or lik a program which has multiple codeek sath chl sakte hai . 
 |                         |                                 __________________
-|                         |                                |                  |
-|                         |                                |                  |
-|                         |                                |                  |
-|                         |                                --------------------
-|                         |                                  |      |        |
-|                         |                                  |      |        |
-                                                      _________   ________   _________
-                                                      | ----  |   | ---- |   |       |
-                                line by line---       | ----  |   |      |   |
-                                 code execution       | ----  |   |      |   |       |
-                                 (Synchronous)        | ----  |   |      |   |       |
+|  |     |     |      |   |                                |                  |
+|  |     |     |      |   |                                |                  |
+|  |     |     |      |   |                                |                  |
+|  |EC   |     |      |   |                                --------------------
+|  |GEC  |     |  f1  |   |                                  |      |        |
+|  -------     --------   |          Threads -> m8ltople     |      |        |
+| callStack      Heap     |                           _________   ________   _________
+___________________________                           | ----  |   | ---- |   |       |
+                             Browser functionality    | ----  |   |      |   |
+                             built in code            | ----  |   |      |   |       |
+                                                      | ----  |   |      |   |       |
                                                       ---------   --------   ---------
-                                                      
+      
+
+*/
