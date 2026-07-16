@@ -90,6 +90,137 @@ ___________________________                           | ----  |   | ---- |   |  
                              built in code            | ----  |   |      |   |       |
                                                       | ----  |   |      |   |       |
                                                       ---------   --------   ---------
-      
+  
+
+*/
+
+
+
+
+/*
+//lets take an expample -------------
+
+console.log("1")
+console.log("2")
+
+f1();
+
+console.log("3")
+console.log("4")
+
+f1();
+
+console.log("5")
+console.log("6")
+
+function f1()
+{
+     console.log("Hello");
+}
+f1();     
+
+//output:-
+
+1
+2
+Hello
+3
+4
+Hello
+5
+6
+Hello
+
+
+//lets undersstad behind the code 
+
+Phase 1: Memory Creation Phase (Global Execution Context)___________________________________
+
+
+Jab JavaScript code run hona start hota hai, sabse pehle Global Execution Context (GEC) create hota hai.
+
+Execution Stack
+
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+Memory Component     -------- JavaScript pehle memory allocate karti hai.
+
+Memory :  f1  --->  function f1() { console.log("Hello"); }
+
+Notice:
+
+1. function f1() poori ki poori memory mein store ho jati hai.
+2. Isliye function ko declaration se pehle bhi call kar sakte ho.
+3. Is process ko Function Hoisting kehte hain.
+
+
+Phase 2: Code Execution Phase____________________________________________________
+
+Ab line by line code execute hoga.
+
+line 1. console.log("1")                       // 1
+
+Line 2. console.log("2")                       // 2
+
+
+Line 3. f1();
+
+Ab function call hua.
+JavaScript ek new Function Execution Context (FEC) create karegi.
+
+Execution Stack:
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+Function execute hota hai : f1(){ console.log("Hello");}        // Hello
+
+Function khatam.  and  Function EC remove ho jayega.
+
+Stack:
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+NExT Line Similar 
+
+
+console.log("3")
+console.log("4")
+
+Output
+
+1
+2
+Hello
+3
+4
+
+Next-
+f1();
+
+Fir se function call. and New Execution Context create hoga.
+
+Stack
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+Output
+
+Hello
+
+Function complete.
+Stack
+
+──────────────┐
+│ Global EC    │
+└──────────────┘
 
 */
