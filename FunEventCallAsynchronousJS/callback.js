@@ -1,5 +1,10 @@
 // __________________________###### CallBack Function ########___________________________________________
 
+//callback function is a type of function , which is passed an arguement to the another function.
+//kisi or function ke andar as an arguement pass hota wahi wahi function callback hota hai.
+// its execute jab tak main function apna task complete nahi kr leta.
+
+
 //lets take and example-
 /*
 function f1(){
@@ -13,7 +18,7 @@ f2(f1);  */                  // JavaScript kehta hai ki call back function f1 wh
 
 //---------or 
 
-
+/*
 function f2(callback){
     callback();             // f1= call back 
 }
@@ -21,10 +26,10 @@ function f2(callback){
 f2(function () {                 // anonymous function ()
     console.log("Hello");
 });
+*/
 
 
-
-
+/*
 //____________Explanation how does it works_______________________________________________________
 
 
@@ -41,8 +46,10 @@ function f2(callback) {
 }
 
 f2(f1);
+*/
 
 
+/*
 Step 1: Functions Memory me store hote hain____________________________________________________
 
 JavaScript sabse pehle dono functions ko memory me store karta hai.
@@ -150,3 +157,4 @@ Flow chart-
         │
         ▼
       Hello
+*/
