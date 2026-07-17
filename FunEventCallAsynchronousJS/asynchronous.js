@@ -278,6 +278,11 @@ now we can see that - JavaScript never waits. and the browser waits.
 
 
 
+
+
+
+
+/*
 //__________________-########## CallStack ############____________________________________
 
 The call stack is the most important concept in JavaScript.
@@ -334,3 +339,60 @@ Finally
 Global
 The call stack is empty again.
 
+
+ / Why Can't JavaScript Run Two Functions together?__________________________________________
+Suppose
+
+while(true){}
+
+This infinite loop never finishes.
+The call stack looks like-
+
+Infinite Loop
+Global
+
+Since the top never leaves, nothing else can execute.
+
+Not-----
+button clicks
+timers
+promses
+keyboard events
+Everything waits.
+
+This is why heavy computations can freeze a page.
+
+*/
+
+
+
+
+
+/*
+//_____________ ##########  Web APIs ###############________________________________
+Many people think
+
+setTimeout()
+
+is a JavaScript feature. but It isn't. JavaScript only says : -------------
+
+"Please create a timer."
+The browser actually creates the timer.
+
+Think of JavaScript as someone placing an order.
+
+    JavaScript
+        │
+        ▼
+
+  "I need a timer."
+        │
+        ▼
+
+Browser Timer Department
+        │
+        ▼
+
+Timer runs independently.
+
+*/
