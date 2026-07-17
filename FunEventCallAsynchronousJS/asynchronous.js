@@ -396,3 +396,54 @@ Browser Timer Department
 Timer runs independently.
 
 */
+
+
+
+
+
+
+/*
+//___________________________####### Set TimeOut ################_____________________________________
+
+//Example :
+
+console. log ( "A" );
+setTimeout(() => { console.log("B"); }, 3000  );
+console.log("C");
+
+
+People often think JavaScript pauses for three seconds.
+It doesn't.
+
+Real sequence:------
+
+step 1  Print A
+        │
+        ▼
+step 2  Ask browser     -- "Run this callback after 3 seconds. "
+        │
+        ▼ 
+Browser Starts timer.
+        │
+        ▼
+JavaScript keeps running.
+        │
+        ▼
+    print C
+        │
+        ▼
+Call stack becmes empty.
+        │
+        ▼
+After 3 seconds,
+browser places callback into a queue.
+        │
+        ▼
+Event loop it onto the stack.
+print B
+
+Output :-
+A
+C
+B
+*/
