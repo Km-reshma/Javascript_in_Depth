@@ -277,26 +277,60 @@ now we can see that - JavaScript never waits. and the browser waits.
 */
 
 
-console.log("1");
 
-function slowTask() {
-    console.log("Slow Task Started");
+//__________________-########## CallStack ############____________________________________
 
-    setTimeout(function () {
-        console.log("Data Received");
-    }, 3000);
+The call stack is the most important concept in JavaScript.
 
-    console.log("Slow Task End");
+Think Of a stack of plates.
+
+|        |
+|plate 3 |
+|plate 2 |
+|plate 1 |
+----------
+
+You always put a new plate on top.
+You always remove the top plate first
+This is called Last In, First Out (UFO).
+Functions work the same way.
+
+//Example : -
+
+function eat() {
+cook() ;
 }
 
-slowTask();
+function cook() {
+wash() ;
+}
 
-console.log("2");
+function wash() {
+console. log("done");
+}
 
-//Output is :
+eat();
 
-1
-Slow Task Started
-Slow Task End
-2
-Data Received
+
+Execution of the above function code -
+
+wash()
+cook()
+eat()
+Global
+
+The engine always executes the function on top.
+
+After wash() finishes
+cook()
+eat()
+Global
+
+Then
+eat()
+Global
+
+Finally
+Global
+The call stack is empty again.
+
