@@ -258,4 +258,45 @@ Imagine clicking a button and the page freezes for 10 seconds because JavaScript
 That would be terrible.
 So JavaScript never waits for long tasks.
 
+
+
+
+//_______________________ ######## Browser = JavaScript's Assistant ######## _____________________________
+
+Think Of JavaScript and the browser like this.
+
+JavaScript say to "Browser" --> wait 5 seconds.
+
+Browser say --->  "Okay. "
+
+After five seconds --- Browser --> "I m done."
+
+JavaScript   --- > "Great.  ---> Run this callback."
+
+now we can see that - JavaScript never waits. and the browser waits.
 */
+
+
+console.log("1");
+
+function slowTask() {
+    console.log("Slow Task Started");
+
+    setTimeout(function () {
+        console.log("Data Received");
+    }, 3000);
+
+    console.log("Slow Task End");
+}
+
+slowTask();
+
+console.log("2");
+
+//Output is :
+
+1
+Slow Task Started
+Slow Task End
+2
+Data Received
