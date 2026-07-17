@@ -481,3 +481,26 @@ Download
 The first completed task gets processed first (for macrotasks).
 
 */
+
+
+
+
+/*
+// _______________ #########  The Event Loop — The Traffic Police ########______________________________
+
+The event loop doesn't execute your code itself.
+It simply watches.
+
+Think of it as a traffic police officer.
+call stack Busy?
+Yes
+Wait
+Call Stack Empty?
+Yes
+Take next callback
+it onto stack
+Repeat forever
+
+Without the event loop, asynchronous callbacks would remain in queues forever.
+
+*/
