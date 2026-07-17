@@ -447,3 +447,37 @@ A
 C
 B
 */
+
+
+
+
+
+
+
+
+/*
+//____________________ ########### Why Do We Need a Queue ############ ___________________________
+
+Imagine three customers finish their work at the same time.
+• Timer finished
+• Mouse clicked
+• File downloaded
+
+Can JavaScript execute all three immediately ?  "  No.  "
+
+It has only one call stack.
+so they wait in line. 
+Queue
+  │
+  ▼
+Timer
+  │
+  ▼
+click
+  │
+  ▼
+Download
+
+The first completed task gets processed first (for macrotasks).
+
+*/
