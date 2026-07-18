@@ -504,3 +504,434 @@ Repeat forever
 Without the event loop, asynchronous callbacks would remain in queues forever.
 
 */
+
+
+
+/*
+
+// lets take an example ________
+
+console.log("1")
+console.log("2")
+
+f1();
+
+console.log("3")
+console.log("4")
+
+f1();
+
+console.log("5")
+console.log("6")
+
+function f1() {
+    console.log("Hello");
+}
+
+f1();
+
+//_________-###### Step 1: Memory Creation Phase (Global Execution Context) ##### ____________________
+
+Jab JavaScript code run hona start hota hai, sabse pehle Global Execution Context (GEC) create hota hai.
+
+Execution Stack----->
+
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+Memory ----> JavaScript pehle memory allocate karti hai.
+
+"  f1  --->  function f1() { console.log("Hello"); }  "
+
+function f1() ka code poora ki poora memory mein store ho jata hai.
+Isliye function ko declaration se pehle bhi call kar sakte ho.
+Is process ko Function Hoisting kehte hain.
+
+
+//_________________ ######## Step 2: Code Execution Phase ######___________________________
+
+Ab line by line code execute hoga.
+
+Line 1.........................................
+console.log("1")    // output : 1
+
+Stack
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+
+Line 2.......................................
+console.log("2")           //Output  : 1
+                                       2
+
+Line 3............................................
+f1();
+
+Ab function call hua.
+JavaScript ek new Function Execution Context (FEC) create karega.
+
+Execution Stack------>
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+Function execute hota hai
+
+console.log("Hello");            //Output :  1
+                                             2
+                                             Hello
+
+Function khatam.
+Function EC remove ho jayega.
+
+Stack------------------->
+ ──────────────┐
+│ Global EC    │
+└──────────────┘
+
+
+Next Lines
+console.log("3")
+console.log("4")
+
+Output    :    1
+               2
+               Hello
+               3
+               4
+
+
+Next...........................................................
+f1();
+
+Fir se function call.
+New Execution Context create hoga.
+
+Stack------------------>
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+Output :   Hello
+
+Function complete.
+
+Stack------------------------------->
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+
+Next
+console.log("5")
+console.log("6")
+
+Output
+
+1
+2
+Hello
+3
+4
+Hello
+5
+6
+
+
+Last....................................................................
+f1();
+
+Fir ek naya Function Execution Context banega.
+
+Stack-------------------------------------->
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+Output : Hello
+
+Function complete.
+
+Stack
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+Program end hone par Global EC bhi remove ho jata hai.
+
+Stack
+Empty
+
+Execution Context Timeline.....................................................
+Program Start
+
+Stack
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+↓
+
+console.log("1")
+
+↓
+
+console.log("2")
+
+↓
+
+f1()
+
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+↓
+
+Hello
+
+↓
+
+f1 EC removed
+
+┌──────────────┐
+│ Global EC    │
+└──────────────┘
+
+↓
+
+console.log("3")
+
+↓
+
+console.log("4")
+
+↓
+
+f1()
+
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+↓
+
+Hello
+
+↓
+
+f1 EC removed
+
+↓
+
+console.log("5")
+
+↓
+
+console.log("6")
+
+↓
+
+f1()
+
+┌──────────────┐
+│ f1 EC        │
+├──────────────┤
+│ Global EC    │
+└──────────────┘
+
+↓
+
+Hello
+
+↓
+
+f1 EC removed
+
+↓
+
+Global EC removed
+
+Stack Empty
+
+
+Final Output: -
+1
+2
+Hello
+3
+4
+Hello
+5
+6
+Hello
+
+imp  point: Global Execution Context sirf ek baar banta hai jab program start hota hai. Lekin har baar f1() call hone par ek naya Function Execution Context (EC/FEC) banta hai, function execute karta hai, aur execution complete hote hi stack se remove ho jata hai. Isi wajah se Hello har function call par print hota hai.
+
+
+
+
+
+//_______________-######### how to use of asynchronous js in dpeth ########_______________________
+
+Asynchronous JavaScript (Async JS) is one of the most important concepts in JavaScript because JavaScript is single-threaded, but it can still perform tasks like API calls, timers, and file operations without blocking the main thread.
+
+
+
+1. Why Do We Need Asynchronous JavaScript?_______________________________________________________
+
+Imafine code:
+
+console.log("Start");
+
+for (let i = 0; i < 10000000000; i++) {}
+
+console.log("End");
+
+Output is : --
+
+Start
+(wait for several seconds)
+End
+
+
+JavaScript is single-threaded.
+It has only one Call Stack, so it executes one task at a time.
+
+The loop blocks the Call Stack.
+
+During that time,..................
+No button click works.
+No API call response is processed.
+No timer executes.
+
+Everything waits.
+
+This is called Blocking Code.
+
+2. Synchronous JavaScript_______________________________________________________________--
+
+Everything executes line by line.
+
+console.log("A");
+console.log("B");
+console.log("C");
+
+Output
+
+A
+B
+C
+
+
+Execution:------------------------------------------------
+Call Stack_________________________________________
+
+Push A
+Execute
+Pop
+
+Push B
+Execute
+Pop
+
+Push C
+Execute
+Pop
+
+
+3. Problem with Synchronous Code
+
+Suppose fetching data from a server takes 5 seconds.
+
+If JavaScript waited,
+
+Open Website
+
+↓
+
+Wait 5 seconds
+
+↓
+
+Then show page
+Terrible user experience.
+
+
+Instead JavaScript says  ---->   "I'll continue executing other code while waiting."
+That's asynchronous programming.
+
+4. What is Asynchronous JavaScript?_________________________________________________________
+
+Asynchronous means --------------->  Don't stop execution.
+Continue running other code while waiting for a task to complete.
+
+Example
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Hello");
+}, 2000);
+
+console.log("End");
+
+Output:---
+Start
+End
+Hello
+
+see that-
+Even though setTimeout appears before "End",
+Hello prints later.
+
+5. How Does JavaScript Do This?______________________________________________________
+
+JavaScript itself has only
+
+Memory
+↓
+Call Stack
+
+It does not contain timers or network APIs.
+
+The browser (or Node.js) provides those features.
+
+In a browser, the environment looks like this:
+
+               Browser
+
+   ┌────────────────────────────┐
+   │ Web APIs                   │
+   │                            │
+   │ setTimeout                 │
+   │ fetch                      │
+   │ DOM Events                 │
+   │ localStorage               │
+   └────────────────────────────┘
+
+              ↑
+
+        Callback Queue
+
+              ↑
+
+         Event Loop
+
+              ↑
+
+        Call Stack
+
+*/
