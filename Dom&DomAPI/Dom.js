@@ -89,6 +89,45 @@ EventTarget — Allows attaching event listeners.
 
 
 
+/*
+let e = document.querySelector ("h1");        // document -ye ek global object hai jo current html page ko  represent karta hai , 
+                                              // ye browser ke through provide hota hai 
+console.log(e.textContent);                   // document → Poore HTML document ka object.
+                                              //querySelector() → document object ki method.-this is a method , ye btata hai kis elemnt ko access karna hai 
 
-let e = document.querySelector ("h1");
-console.log(e.textContent);
+                                              // output is : Hello Java Script   
+                                              // h1 ka pura ka pura elemment ka text content console ho gya                                            //"h1" → CSS selector.
+                                              //  document objet not run at " node " bcz it is object whic is provded by browser.
+*/
+
+// or-----------
+// if we access or console the "tag name or element name "  as we use " e.tagName "
+
+/*let e = document.querySelector("h1");
+
+console.log(e.tagName);                   // output :  H1 ----- elemet or tag name access
+console.log(e.textContent);               // output is :   Hello Java Script -  all content of h1 tag access
+*/
+
+
+
+
+// _______________########### Why we use Dom ##########_____________________________________
+/*
+1. Html ke element ko access karne ke liye               (getElementById, querySelector )
+
+2. change the content of document dynamically            (innerText, textContent)
+    like -
+         e.textContent = " Hello Reshma "
+         console.log(e.textConent);
+
+3. Handles Event - suppose you create a  button and        (addEventListner);
+you want to change ka color of the page , when user 
+click the button , some event ir trigger is happen 
+when click the button that is possible by dom and jsx.
+** Button click karna - this a also an event.
+                                                          
+                                                          
+4. create/ remove element                                 (appendChild, remove)
+
+*/
