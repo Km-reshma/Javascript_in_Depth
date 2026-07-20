@@ -90,4 +90,5 @@ EventTarget — Allows attaching event listeners.
 
 
 
-
+let e = document.querySelector ("h1");
+console.log(e.textContent);
