@@ -130,4 +130,74 @@ when click the button that is possible by dom and jsx.
                                                           
 4. create/ remove element                                 (appendChild, remove)
 
+
+Working of DOM__________________________________________________________________________________
+The DOM connects your webpage to JavaScript, allowing you to:
+
+Access elements (like finding an <h1> tag).
+Modify content (like changing the text of a <p> tag).
+React to events (like a button click).
+Create or remove elements dynamically.
+
 */
+
+
+
+
+
+
+
+
+
+
+//_____________________ ############### DOM Methods #############______________________________
+
+//1. Access or Selecting Elements ____________________________________________________________
+
+//An element is the complete HTML object, including the opening tag, content, and closing tag.
+//A tag is the HTML syntax used to define an element. It is written inside angle brackets (< >).
+
+
+/*
+(a).  document.getElemetById()
+
+Selects or Retrieves an element by its unique id.
+id is unique of each element so not use for all common element only for one. 
+
+
+//example----------------
+
+let a = document.getElementById("heading1");
+console.log(a);
+
+// output is : <h1 id = "heading1">  first Heading - Hello Java Script</h1>
+
+
+
+
+(b). document.getElementsByTagName()_________________________________________________________________________
+
+Selects all elements with a tag.
+Returns all the collection of elements  */
+
+//Example------------
+
+let b = document.getElementsByTagName("h1");
+
+console.log(b);                   //HTMLCollection(2) [h1#heading1, h1, heading1: h1#heading1] 
+
+console.log(b[0]);                // <h1 id = "heading1">  first Heading - Hello Java Script</h1>
+
+console.log(b[1]);               // <h1> Secomd heading - This is a special course.</h1>
+
+
+
+(c). document.getElementsByClassName()___________________________________________________________________
+
+Selects all elements with a class name.
+Returns a collection of elements with a specified class.
+method retrieves all elements that share a given class name.
+
+
+    
+
