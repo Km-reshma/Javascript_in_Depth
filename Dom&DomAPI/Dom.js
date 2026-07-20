@@ -171,14 +171,14 @@ let a = document.getElementById("heading1");
 console.log(a);
 
 // output is : <h1 id = "heading1">  first Heading - Hello Java Script</h1>
+*/
 
 
-
-
+/*
 (b). document.getElementsByTagName()_________________________________________________________________________
 
 Selects all elements with a tag.
-Returns all the collection of elements  */
+Returns all the collection of elements  
 
 //Example------------
 
@@ -189,15 +189,119 @@ console.log(b);                   //HTMLCollection(2) [h1#heading1, h1, heading
 console.log(b[0]);                // <h1 id = "heading1">  first Heading - Hello Java Script</h1>
 
 console.log(b[1]);               // <h1> Secomd heading - This is a special course.</h1>
+*/
 
 
-
+/*
 (c). document.getElementsByClassName()___________________________________________________________________
 
 Selects all elements with a class name.
 Returns a collection of elements with a specified class.
 method retrieves all elements that share a given class name.
 
+//Example-----------------
 
-    
+let c = document.getElementsByClassName(" c1 ");
+
+console.log(c);               // output is : HTMLCollection(2) [p.c1, h2.c1]
+*/
+
+
+/*
+(d). document.querySelector()_______________________________________________________________
+
+Returns the first matching element.
+
+//Example ----------
+
+
+let d = document.querySelector("h1");
+
+console.log(d);                // h1 id = "heading1">  first Heading - Hello Java Script</h1>
+*/
+
+
+
+/*
+(e). querySelectorAll()_______________________________________________________________________________
+
+Returns all elements matching a CSS selector.
+
+//Example -----------------
+
+let e = document.querySelectorAll("h1");
+
+console.log(e);                    // output is : NodeList(2) [h1#heading1, h1]
+*/
+
+
+
+
+/*
+2. difference between "html tag", "inner html", and "textContent" ____________________________________________
+
+| HTML Tag                |  innerHTML                       |  textContent              |
+| ----------------------- | -------------------------------- | ------------------------- |
+| The actual HTML element | Gets/sets HTML inside an element | Gets/sets only plain text |
+| Example: `<p></p>`      | Can include HTML tags            | Shows tags as text        |
+
+
+(a). HTML Tag---------------------------------------------------------------------------------
+
+An HTML tag is an element used to build a webpage.
+
+Example----     
+1. <h1>Hello</h1>
+2. <p>This is a paragraph.</p>
+3. <div></div>
+
+Here:
+
+<h1> is an HTML tag.
+<p> is an HTML tag.
+<div> is an HTML tag.
+
+
+(b). innerHTML----------------------------------------------------------------------------------
+
+innerHTML reads or changes everything inside an element, including HTML tags or inner html tag.
+
+Example
+<div id="box"></div>
+
+<script>
+document.getElementById("box").innerHTML = "<h2>Welcome</h2>";
+</script>
+
+The browser creates an actual <h2> element.
+
+Output :    Welcome
+
+The page becomes:-------------
+
+<div id="box">
+    <h2>Welcome</h2>
+</div>
+
+
+
+Another Example------------------
+box.innerHTML = "<b>Hello</b>";
+
+Output : Hello
+
+Because <b> is treated as an HTML tag.
+
+(c). textContent-------------------------------------------------------------------------------------
+
+textContent adds or gets only plain text.
+It does not interpret HTML tags.
+
+Example---------------
+box.textContent = "<b>Hello</b>";
+Output : <b>Hello</b>
+
+The browser displays the angle brackets and letters exactly as text.
+
+*/
 
