@@ -468,6 +468,7 @@ document.body.append(p);
 
 
 
+
 // ______________________  #########  Remove() ###########___________________________________________________________________________
 
 //remove() : Ye kisi element ko webpage se hata deta hai.
@@ -480,6 +481,67 @@ document.body.append(p);
 </h3>*/
 
 //in js example-------------------------
-
+/*
 let h3 = document.getElementById("heading3");
 h3.remove();                                            // h3 tag +content =element is deleted from the web page 
+
+*/
+
+
+
+
+/*
+//____________________-########### How To Control CSS by using jaavscript Dynamically ############# _________________________
+
+
+Step 1:  Element ko select (access) karo , Jis element par CSS lagani hai, usse DOM se select karo.
+
+         let heading = document.getElementById("heading1");
+
+Step 2:  style property ka use karke CSS apply karo
+
+Syntax:  element.style.cssProperty = "value";*/
+
+//Example:-------------------------------
+/*
+let h1 = document.getElementById("heading1");
+
+h1.style.color = "red";
+h1.style.backgroundColor = "yellow";
+h1.style.fontSize = "40px";*/
+
+//TagName----------------------------------// we have two h1 tag so collection of h1 if we want change in first h1 then use 
+                                           // then use h1[0 ]  according to index 
+/*let h1 = document.getElementsByTagName("h1");
+
+h1[0].style.color = "red";
+h1[0].style.backgroundColor = "yellow";
+h1[0].style.fontSize = "40px";
+*/
+
+
+/*
+// if we apply the css both h1 so we use loop 
+
+let h1 = document.getElementsByTagName("h1");
+
+for (let i = 0; i < h1.length; i++){
+
+  h1[i].style.color = "red";
+  h1[i].style.backgroundColor = "yellow";
+  h1[i].style.fontSize = "40px";
+
+
+}
+*/
+
+
+
+/*
+// document → poore HTML page ko represent karta hai (DOM ka root object).__________________________________________
+
+document.body.style.backgroundColor="grey";  // pure page ka color change 
+
+document.body.style.color= "blue";
+
+document.body.style.fontFamily = "Arial"*/
