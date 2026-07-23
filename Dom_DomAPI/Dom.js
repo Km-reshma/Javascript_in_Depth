@@ -345,8 +345,33 @@ d. textContent = Ye element ke andar ka saara text deta hai. ___________________
 
 
 
-
+/*
 3. ________________ ##########  change the content dynamically ############______________________________________________
 
-hange the content of any cript dynamically witCh the help of javascript not in html 
+change the content of any cript dynamically witCh the help of javascript not in html.
 
+(a). By Using ".textContent" :
+    
+//example : h1 tag ka content change karna hai jiski headinng "heading1" hai --------------
+
+let h1 = document.getElementById("heading1");
+h1.textContent = "This is first Heading - Hello JavaScript Change dynamically content";
+
+//output at browser screen par ye dikhega : This is first Heading - Hello JavaScript Change dynamically content
+
+
+
+//Exanple 2 . --------->   h1 tag ki sari headiing change krni without id  so we use --------" getelementByTagName("tagName") "______________________________
+
+
+let headings = document.getElementsByTagName('h1');
+
+headings[0].textContent = "This is first Heading - Hello JavaScript Change dynamically content";
+headings[1].textContent = "This is a Second Heading - This is a special course for beginnner friendly students- dynamicaly change the haeding through the js ";
+
+// output is on the browser screen :
+
+// "This is first Heading - Hello JavaScript Change dynamically content"
+// "This is a Second Heading - This is a special course for beginnner friendly students- dynamicaly change the haeding through the js"
+
+*/
