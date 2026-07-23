@@ -404,3 +404,46 @@ Text ke saath HTML tags bhi add karne ho →               innerHTML use karo.
 */
 
 
+
+/*
+// ____________________________  ##########  createElement() ##############  ________________________________________________
+
+createElement() : we create a new html element with the help of " createElement() "
+
+Syntax:    document.createElement("tagName");
+
+let h2 = document.createElement("h2");
+
+Ab memory me ek naya <h2> element ban gaya hai.
+
+But Lekin abhi  bhi browser me nahi dikhega.  because ?
+
+bcz we create only a new element, not add at the page (page me add (append) nahi kiya.)
+
+Steps how to create a new element and append it to the page ---------------------------------------------
+
+step 1. Element Create Karo:
+
+        let h2 = document.createElement("h2");
+        <h2></h2>   
+        memory me bana hai.
+
+Step 2: Usme Text Dalo :
+
+        h2.textContent = "This is a new Heading which is created dynamically"
+        Ab element ban gaya <h2>This is a new Heading</h2>
+        But abhi bhi webpage par nahi dikhega.        
+
+Step 3: Webpage me Add Karo :
+      
+        document.body.appendChild(h2);
+        Naya <h2> sabse last me add ho gaya
+
+Flow of Create a new elememt Dynamically:-
+
+createElement()
+        ↓
+textContent / innerHTML
+        ↓
+appendChild()
+*/
