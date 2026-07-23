@@ -449,7 +449,7 @@ appendChild()
 */
 
 
-
+/*
 // ______________________ ########## . append() ############_________________________________________________
 
 //append() : Ye kisi element ke andar naya element ya text add karta hai.
@@ -464,3 +464,22 @@ document.body.append(p);
 
 //output : " This is Paragraph "
 // page ke end me aa jayega
+*/
+
+
+
+// ______________________  #########  Remove() ###########___________________________________________________________________________
+
+//remove() : Ye kisi element ko webpage se hata deta hai.
+
+//Syntax :  element.remove();
+
+// in my dom1.html page mein - 
+/* <h3 id="heading3">
+    <u>Hello we check inner html or textContent</u>
+</h3>*/
+
+//in js example-------------------------
+
+let h3 = document.getElementById("heading3");
+h3.remove();                                            // h3 tag +content =element is deleted from the web page 
