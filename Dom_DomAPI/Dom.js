@@ -447,3 +447,20 @@ textContent / innerHTML
         ↓
 appendChild()
 */
+
+
+
+// ______________________ ########## . append() ############_________________________________________________
+
+//append() : Ye kisi element ke andar naya element ya text add karta hai.
+
+//Syntax:     parent.append(child);                 like : body.append("h1");
+
+//Example-
+
+let p = document.createElement("p");
+p.textContent = "This is Paragraph";
+document.body.append(p);
+
+//output : " This is Paragraph "
+// page ke end me aa jayega
