@@ -374,4 +374,33 @@ headings[1].textContent = "This is a Second Heading - This is a special course f
 // "This is first Heading - Hello JavaScript Change dynamically content"
 // "This is a Second Heading - This is a special course for beginnner friendly students- dynamicaly change the haeding through the js"
 
+
+
+
+
+
+
+
+___________________ change the content by ungi " innerHTML " dynamically ___________________________________________
+
+innerHTML se bhi change ho sakta hai.
+Agar sirf text change karna hai, to dono kaam karenge.
+
+
+//Example: 
+
+let h1 = document.getElementById("heading1");
+
+h1.innerHTML = "This is first heading 1";
+
+// output - " This is first heading "
+
+
+both are same but one difference is ------------------------------------------------------------------
+
+Sirf text change karna ho →                              textContent use karo.
+Text ke saath HTML tags bhi add karne ho →               innerHTML use karo.
+
 */
+
+
