@@ -545,3 +545,147 @@ document.body.style.backgroundColor="grey";  // pure page ka color change
 document.body.style.color= "blue";
 
 document.body.style.fontFamily = "Arial"*/
+
+
+
+/*
+
+// __________________ ###########  Event and Event Handling ############ ______________________________________________
+
+Event : An event is an user interaction, like ckick & Response.
+
+Event:  matlab browser me hone wali koi action ya activity,  Ye action user bhi kar sakta hai aur browser bhi.
+
+Examples:
+
+Button par click karna
+Keyboard ki key dabana
+Mouse ko move karna
+Input box me type karna
+Page load hona
+
+These are the Events's Examples.
+
+
+let's take an Example of real-based -------------------
+
+Socho tumhare ghar ki doorbell hai.
+
+Bell bajna = Event
+Bell ki awaaz sun kar darwaza kholna = Event Handling
+
+Event Handling----------------------------------------------------------------------------------------------------
+
+Event Handling means ---  Jab koi event occur ho , tab kya kaam karna hai.
+
+Like -  Button click → Alert dikhao.
+        Mouse hover → Color change karo.
+        Input me type → Text print karo.
+
+*/
+
+
+
+/*
+// _________________________ ############ EventListener() ############# ______________________________________
+
+Syntax : "  element.addEventListener("event", function); "
+
+element : Jis HTML element par event lagana hai.
+
+Example : button.addEventListener(...)              
+"Button par event lagao."
+
+2. . (Dot Operator)      :    button.addEventListener(...)
+
+. ka matlab hai :   "Is object ki property ya method use karo."
+
+like :     document.body
+           document → object
+           body → property
+
+
+like :     button.addEventListener()
+           button → object
+           addEventListener() → method
+
+
+3. addEventListener : Ye ek method (function) hai. - Kisi element ko bolo ki "kisi event ko suno (listen karo)."
+
+Simple language:   "Jab ye event ho, tab ye function chala de."
+
+
+addEventListener()
+
+Brackets ka matlab hai, Hum method ko call (execute) kar rahe hain.
+Method ke andar information bhejte hain.
+
+
+
+4. element.addEventListener(event, function)
+
+a. Event ..................................................................
+// Example:  button.addEventListener("click", ...) ------------>  Yahan "click" ek event name hai. 
+// "Jab button par click ho.
+
+Common events:...................
+
+click
+dblclick
+mouseover
+input
+change
+submit
+
+
+b. function -----------------------------------------------------------------------------------
+
+function(){
+
+}                                 //this is an funtion and Event hone ke baad ye code chalega.
+
+//example :
+
+button.addEventListener("click", function(){
+
+    alert("Hello");
+});
+*/
+
+
+//Event Handling apply at my html apge "dom1.html"
+/*
+let button = document.getElementById("btn");
+
+button.addEventListener('click', function(){
+      alert("Button clicked");
+      button.style.backgroundColor = "yellow";
+      button.style.color = "red";
+});
+*/
+
+/*
+let h1 = document.getElementsByTagName("h1");
+
+h1[0].addEventListener('mouseover', () => { 
+
+         h1[0].style.color="skyblue";
+         h1[0].style.fontSize = "20px";
+
+});*/
+
+
+
+/*
+let h1 = document.getElementsByTagName("h1");
+
+for (let i = 0; i < h1.length; i++) {
+
+h1[i].addEventListener('mouseover', () => { 
+
+         h1[i].style.color="skyblue";
+         h1[i].style.fontSize = "20px";
+
+       });
+} 
+*/
