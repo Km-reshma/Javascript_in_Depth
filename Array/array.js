@@ -20,3 +20,22 @@ let arr1 = [10, 20];
 console.log(typeof arr1);                                           // object
 
 console.log(Array.isArray(arr1));                                   // true
+
+
+//Sparse Arrays Support Karte Hain ------->  JavaScript mein array ke beech mein empty slots (holes) ho sakte hain.
+
+let arr2 = [];
+arr2[5] = 50;
+
+console.log(arr2);                                                 //[ <5 empty items>, 50 ]
+
+
+//Elements Add aur Remove Karna Easy Hai
+
+let arr3 = ["Red", "Blue"];
+
+arr3.push("Green");
+console.log(arr3);                                                  //[ 'Red', 'Blue', 'Green' ]
+
+arr3.pop();
+console.log(arr3);                                                  //[ 'Red', 'Blue' ]
