@@ -107,14 +107,14 @@ __________________########### Creating a string from an Array  ###########______
 
  uses the join() method to create a string from the fruits array.
 
- //Example:*/
+ //Example:
 
  let  fruits = ["Apple", "Banana", "Mango", "Grapes"];
 
  let fruitString = fruits.join(',');                             // here we convert the array into the string by using "join()" metho
 
  console.log(fruitString);                                       // output is : Apple,Banana,Mango,Grapes
-
+*/
 
 
 
@@ -176,3 +176,67 @@ console.log(fruits.at(-1));
 let index = 2;
 console.log(fruits[index]);                                       //Output: Mango
 */
+
+
+// _____________ ######## Accesing element by using loop ##############_______________________________
+
+
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+/*
+//for loop :
+for(let i =0; i<fruits.length; i++){
+
+console.log(fruits[i]);
+}
+
+//output is : Apple
+              Banana
+              Mango 
+              Orange
+
+// while loop :
+
+let i=0;
+while(i<fruits.length){
+    console.log(fruits[i]);
+    i++;
+}
+
+//output is : Apple
+              Banana
+              Mango 
+              Orange
+ 
+
+// for loop : ------------------return the index of the array items -- means " key (index )" return karta hai 
+
+for (let fruitsName in  fruits){
+   console.log(fruitsName);                    
+
+}
+
+// output is :
+0
+1
+2
+3
+
+for (let fruitsName of  fruits){      //eturn the value of the array  -- means " key ki value " return karta hai 
+               
+   console.log(fruitsName);                    
+
+}
+
+
+//Agar key (index) aur value dono ek saath print karni ho, to kai tarike hain.:      "for...of + entries()"
+
+for (let [index, value] of fruits.entries()) {
+    console.log(index, value);
+}
+
+output is :
+0 Apple
+1 Banana
+2 Mango
+3 Orange
+*/    
