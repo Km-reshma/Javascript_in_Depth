@@ -99,5 +99,21 @@ arr.push(30);
 console.log(arr);
 
 Output:  [10, 20, 30]
-
 */
+
+
+/*
+__________________########### Creating a string from an Array  ###########___________________________________
+
+ uses the join() method to create a string from the fruits array.
+
+ //Example:*/
+
+ let  fruits = ["Apple", "Banana", "Mango", "Grapes"];
+
+ let fruitString = fruits.join(',');                             // here we convert the array into the string by using "join()" metho
+
+ console.log(fruitString);                                       // output is : Apple,Banana,Mango,Grapes
+
+//_______________________ ############ Accesing the element from the Array ############_______________________________________
+
