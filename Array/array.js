@@ -115,5 +115,64 @@ __________________########### Creating a string from an Array  ###########______
 
  console.log(fruitString);                                       // output is : Apple,Banana,Mango,Grapes
 
+
+
+
+/*
+
 //_______________________ ############ Accesing the element from the Array ############_______________________________________
 
+Array ke elements ko access karne ke liye index ka use kiya jata hai.
+Note: JavaScript arrays 0-based indexing follow karti hain. Iska matlab pehla element index 0 par hota hai.
+
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+1. First Element Access Karna------------------------------------------------------------------------
+console.log(fruits[0]);                           //Output: Apple
+
+2. Second Element Access Karna----------------------------------------------------------------------------
+console.log(fruits[1]);                           //Output:Banana
+
+3. Third Element Access Karna------------------------------------------------------------------------------
+console.log(fruits[2]);                           //Output:Mango
+
+4. Last Element Access Karna-------------------------------------------------------------------------------
+
+Method 1: Using length---------------------------------------------------------------->
+
+console.log(fruits[fruits.length - 1]);                      // Output:Orange
+
+Explanation:
+fruits.length = 4
+Last index = 4 - 1 = 3
+fruits[3] = "Orange"
+
+Method 2: Using .at()----------------------------------------------------------------->
+console.log(fruits.at(-1));                                 //Output:Orange
+
+.at(-1) directly last element return karta hai.
+
+5. Invalid Index--------------------------------------------------------------------------------------------------------------
+
+console.log(fruits[10]);                                    //Output: undefined
+
+Explanation:
+Index 10 exist nahi karta, isliye undefined return hota hai.
+
+6. Negative Index----------------------------------------------------------------------------------------------
+
+console.log(fruits[-1]);                                   //Output: undefined
+
+Reason:
+Square bracket notation ([]) negative index support nahi karti.
+
+7. Agar last element chahiye, to use:------------------------------------------------------------------------------
+
+console.log(fruits.at(-1));
+
+
+7. Access Using Variable--------------------------------------------------------------------------------------
+
+let index = 2;
+console.log(fruits[index]);                                       //Output: Mango
+*/
