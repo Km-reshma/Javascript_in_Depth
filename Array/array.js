@@ -181,7 +181,9 @@ console.log(fruits[index]);                                       //Output: Mang
 // _____________ ######## Accesing element by using loop ##############_______________________________
 
 
-let fruits = ["Apple", "Banana", "Mango", "Orange"];
+//let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+
 /*
 //for loop :
 for(let i =0; i<fruits.length; i++){
@@ -240,3 +242,25 @@ output is :
 2 Mango
 3 Orange
 */    
+
+
+
+
+/*
+// ___________________________ ########## Modify Array ################# ____________________________________
+
+
+In JavaScript, you can modify an array by adding, removing, or updating its elements.
+Here are the most common ways:
+
+1. Update an Element : Change the value at a specific index.*/
+
+//Example :
+
+let a = [10, 20, 30, 40, 50];
+console.log(a);                                    // [ 10, 20, 30, 40, 50 ]
+ 
+a[1] = 15;
+console.log(a);                                   // [ 10, 15, 30, 40, 50 ]
+
+
