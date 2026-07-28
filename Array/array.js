@@ -265,6 +265,12 @@ console.log(fruits.indexOf("Banana"));    */                                 // 
 
 includes() method : Check if an array contains a certain item.
 
+# includes() value ko search karta hai.
+# Agar value mil jaye to true return karta hai.
+# Agar na mile to false return karta hai.
+# Arrays aur strings dono ke saath use kiya ja sakta hai.
+#Ye case-sensitive hota hai.
+
 JavaScript mein includes() method ka use check karne ke liye hota hai ki koi value array ya string mein present hai ya nahi.
 
 Ye true ya false return karta hai.
@@ -286,9 +292,19 @@ syntax: array.includes(value,index);
 let fruit = ["Apple", "Banana", "Mango", "Orange"];
 console.log(fruit.includes("Mango",1));                          //true
                                     |
-                                    |_____________ ye index batata hai ki kis index se search start karna hai */
+                                    |_____________ ye index batata hai ki kis index se search start karna hai 
 
 
+
+                                    
+3. String ke saath includes():
+
+let message = "Hello JavaScript";
+
+console.log(message.includes("Java")); // true
+console.log(message.includes("Python")); // false
+console.log(message.includes("o JavaS")); // true;
+*/
 
 
 
