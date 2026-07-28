@@ -241,7 +241,54 @@ output is :
 1 Banana
 2 Mango
 3 Orange
-*/    
+*/  
+
+
+
+
+/*
+// _______________ ############# Find the index of an item in an array ############ ____________________________
+
+indexOf() method is used to find the index of an item in the array.
+
+This example uses the   ""   indexOf()   ""   method to find the position (index).
+
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+console.log(fruits.indexOf("Banana"));    */                                 // 1
+
+
+
+
+/*
+// _____________############ "" includes()  "" ############# _______________________________________
+
+includes() method : Check if an array contains a certain item.
+
+JavaScript mein includes() method ka use check karne ke liye hota hai ki koi value array ya string mein present hai ya nahi.
+
+Ye true ya false return karta hai.
+
+
+1. Array ke saath includes() :
+syntax: array.includes(valueToFind)
+
+//Example
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+console.log(fruits.includes("Mango"));                          //true
+
+
+2. Starting Index ke saath includes(): 
+Aap search kis index se start karni hai, wo bhi de sakte hain.
+syntax: array.includes(value,index);
+
+//example :
+let fruit = ["Apple", "Banana", "Mango", "Orange"];
+console.log(fruit.includes("Mango",1));                          //true
+                                    |
+                                    |_____________ ye index batata hai ki kis index se search start karna hai */
+
+
 
 
 
