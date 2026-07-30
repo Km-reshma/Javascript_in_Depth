@@ -296,7 +296,7 @@ console.log(fruit.includes("Mango",1));                          //true
 
 
 
-                                    
+
 3. String ke saath includes():
 
 let message = "Hello JavaScript";
@@ -316,7 +316,7 @@ console.log(message.includes("o JavaS")); // true;
 In JavaScript, you can modify an array by adding, removing, or updating its elements.
 Here are the most common ways:
 
-1. Update an Element : Change the value at a specific index.*/
+1. Update an Element : Change the value at a specific index.
 
 //Example :
 
@@ -325,5 +325,56 @@ console.log(a);                                    // [ 10, 20, 30, 40, 50 ]
  
 a[1] = 15;
 console.log(a);                                   // [ 10, 15, 30, 40, 50 ]
+
+//*************** By Using Loop ***********************
+
+let a = [10, 20, 30, 40, 50];
+
+for( let num of a){
+   num = num +5;                                  // to sirf num badalta hai: a array mein change nahi hot hai 
+   console.log(num);                             // output is : [ 15, 25, 35, 45, 55 ]                                                       
+   
+}
+
+console.log(a);                                    // out is : [ 10, 20, 30, 40, 50 ]*/
+                         
+// "for...of gives you a copy of each element's value, not the actual array element. bcz Yahan num sirf ek temporary variable hai."
+// not modifued in array(actual array "a")
+
+/*
+//----------if we modufued or cahnge the actual array so we use nornal for loop or " for in ";----------------------------------
+
+
+let a = [10, 20, 30, 40, 50];
+
+for(let i =0; i< a.length; i++){
+
+   a[i] = a[i] + 5;
+}
+
+console.log(a);                       // [ 15, 25, 35, 45, 55 ]
+
+
+ //##############   num = num + 5 → Variable change hota hai.    ##############
+ //##############   a[i] = a[i] + 5 → Array change hoti hai.     #############3
+ //############## "for in" , "normmal for loop " se modify ho jata hai bcz index ko denote krte hai 
+ //############## " fir of " se nahi hota bcz ye vlue return krta hau copy of tha index .
+
+
+
+let b = [10, 20, 30, 40, 50];
+
+for(let num1 in b ){
+
+   b[num1] = b[num1] + 5;
+
+}
+
+console.log(b);                                //[ 15, 25, 35, 45, 55 ]
+*/
+
+
+
+
 
 
