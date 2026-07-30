@@ -120,9 +120,24 @@ Usko remove kiya aur usi jagah   100   add kar diya.
 /*
 ____________________ ###########  unshift() method ################________________________________________
 
-unshift() method is used to add elements to the front of an Array.*/
+unshift() method is used to add elements to the front of an Array.
 
 let a = [10,20,30,40];
 
 a.unshift(5);
-console.log(a);
+console.log(a);                                // [ 5, 10, 20, 30, 40 ]
+*/
+
+
+
+/*
+_____________________ ############# shift() method ###############_________________________________________________
+
+The shift() method is used to remove elements from the beginning of an array 
+
+let a = [10,20,30,40];
+
+a.shift();
+console.log(a);                             // [ 20, 30, 40 ]
+
+*/
