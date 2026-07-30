@@ -113,3 +113,16 @@ index 1 par value hai:    20
 Usko remove kiya aur usi jagah   100   add kar diya.
 
 */
+
+
+
+
+/*
+____________________ ###########  unshift() method ################________________________________________
+
+unshift() method is used to add elements to the front of an Array.*/
+
+let a = [10,20,30,40];
+
+a.unshift(5);
+console.log(a);
