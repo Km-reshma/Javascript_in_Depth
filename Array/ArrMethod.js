@@ -141,3 +141,35 @@ a.shift();
 console.log(a);                             // [ 20, 30, 40 ]
 
 */
+
+
+
+/*
+
+________________ ######### slice() method #################__________________________________________
+
+The slice() method returns a new array containing a portion of the original array,
+based on the start and end index provided as arguments
+
+slice () method  array ka ek portion copy karke naya array banata hai.
+Important: slice() original array ko modify nahi karta.
+
+Syntax : array.slice(startIndex, endIndex);
+
+startIndex → Kis index se copy shuru karni hai.
+endIndex → Kis index tak copy karni hai (ye include nahi hota).*/
+
+// Example :
+
+let a = [10,20,30,40,50,60,70,80,90];
+
+console.log(a.slice(2));                    //  [30,40,50,60,70,80,90];
+
+console.log(a.slice(2,7));                 // [ 30, 40, 50, 60, 70 ] due to last index is (n-1) so if n =7 the n-1 = 6.
+
+console.log(a.slice(0,5));                  //[ 10, 20, 30, 40, 50 ]
+
+
+
+//Negative index : -2 ka mtlb -> End se 2nd element se start karo.
+console.log(a.slice(-2));                           // [ 80, 90 ]
