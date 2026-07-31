@@ -208,7 +208,7 @@ concat() ka used  do ya usse zyada arrays ko jod (combine) karne ke liye use hot
 
 mportant: concat() original array ko modify nahi karta. Ye ek naya array return karta hai.
 
-Syntax : array1.concat(array2, array3, ...);   */
+Syntax : array1.concat(array2, array3, ...);  */
 
 //Example : 
 
@@ -217,4 +217,25 @@ let a2 = [14, 15, 16];
 let a3 = [17, 18, 19];
 
 let newArr = a1.concat(a2, a3);
-console.log(newArr);                //[11, 12, 13, 14, 15, 16, 17, 18, 19]
+console.log(newArr);                //[11, 12, 13, 14, 15, 16, 17, 18, 19] */
+
+
+
+
+
+/*
+__________________- ########### indexOf() method ###########____________________________________________________
+
+indexOf() method is used to find the first index of a specific element. Kisi specific value ka pehla index return karta hai.
+(if element is repeated so firdt elemet jo milega uska index return karega)*/
+
+
+let a = [10, 20, 30, 20, 40];
+
+console.log(a.indexOf(20));              // 1
+
+console.log(a.indexOf(40));              // 4
+
+// if element doest not exit then return " -1 "
+
+console.log(a.indexOf(100));              //-1
