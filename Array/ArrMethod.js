@@ -255,7 +255,6 @@ findIndex is used for - condition ke basis par jo pehla matching element conditi
 satisfied karta hai uska index return karta hai.
 
 Syntax: array.findIndex(callback);
-*/
 
 //Example :
 
@@ -266,4 +265,29 @@ console.log(b);                                 // output is : 2
                                                 //Kyuki 30 pehla number hai jo 25 se bada hai isliye 30 ka index return kiya 
 
 let c = a.findIndex(a => a>50); 
-console.log(c);                                 //output : -1,       if condistion not satisfed(or not match )                                       
+console.log(c);                                 //output : -1,       if condistion not satisfed(or not match ) 
+*/
+
+
+
+
+
+/*
+______________________ ########### findLast() method ############# _________________________________________________
+
+findLast() method Condition ke basis par last matching element ki " value return  " karta hai.
+
+
+//Example : 
+
+let a = [10,20,30,40,50];
+
+let b = a.findLast(a => a < 50);       // output : 40 , bcz Ye last element hai jo 50 se chhota hai.
+console.log(b);
+
+***********  Important ***************
+
+findLast()         :  value return karta hai.
+findLastIndex()    :  index return karta hai.
+
+*/
