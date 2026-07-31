@@ -291,3 +291,29 @@ findLast()         :  value return karta hai.
 findLastIndex()    :  index return karta hai.
 
 */
+
+
+
+
+
+/*
+_________________________ ######### findLastIndex ##############_______________________________
+
+findLastIndex() method Condition ke basis par last matching element ka index return karta hai.
+
+
+//Example :
+
+let a = [10,20,30,20,40,50];
+
+let b = a.findLastIndex(a => a == 20);                 //3            bcz last se 20 pahle jiska index 3
+console.log(b);
+
+let c = a.findLastIndex(a => a < 35);                  // 3         bcz last se a ki pahle 35 se chotti is 20 jik index 3
+console.log(c);
+
+let d = a.findFirstIndex(a => a == 20);                       // it is not a function 
+console.log(d);
+
+*/
+
