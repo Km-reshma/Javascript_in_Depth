@@ -208,7 +208,7 @@ concat() ka used  do ya usse zyada arrays ko jod (combine) karne ke liye use hot
 
 mportant: concat() original array ko modify nahi karta. Ye ek naya array return karta hai.
 
-Syntax : array1.concat(array2, array3, ...);  */
+Syntax : array1.concat(array2, array3, ...); 
 
 //Example : 
 
@@ -227,7 +227,7 @@ console.log(newArr);                //[11, 12, 13, 14, 15, 16, 17, 18, 19] */
 __________________- ########### indexOf() method ###########____________________________________________________
 
 indexOf() method is used to find the first index of a specific element. Kisi specific value ka pehla index return karta hai.
-(if element is repeated so firdt elemet jo milega uska index return karega)*/
+(if element is repeated so firdt elemet jo milega uska index return karega)
 
 
 let a = [10, 20, 30, 20, 40];
@@ -238,4 +238,32 @@ console.log(a.indexOf(40));              // 4
 
 // if element doest not exit then return " -1 "
 
-console.log(a.indexOf(100));              //-1
+console.log(a.indexOf(100));              //-1    */
+
+
+
+
+
+/*
+__________________ ############ findIndex() method ################ __________________________________
+
+findIndex() method of Array  returns the index of the first element in an array 
+that satisfies the provided testing condition function. 
+If no elements satisfy the testing function, -1 is returned.
+
+findIndex is used for - condition ke basis par jo pehla matching element condition 
+satisfied karta hai uska index return karta hai.
+
+Syntax: array.findIndex(callback);
+*/
+
+//Example :
+
+let a =[10, 20, 30, 40, 50];
+
+let b = a.findIndex(a => a > 25);
+console.log(b);                                 // output is : 2
+                                                //Kyuki 30 pehla number hai jo 25 se bada hai isliye 30 ka index return kiya 
+
+let c = a.findIndex(a => a>50); 
+console.log(c);                                 //output : -1,       if condistion not satisfed(or not match )                                       
