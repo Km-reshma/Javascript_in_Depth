@@ -157,19 +157,64 @@ Important: slice() original array ko modify nahi karta.
 Syntax : array.slice(startIndex, endIndex);
 
 startIndex → Kis index se copy shuru karni hai.
-endIndex → Kis index tak copy karni hai (ye include nahi hota).*/
+endIndex → Kis index tak copy karni hai (ye include nahi hota).
 
 // Example :
 
-let a = [10,20,30,40,50,60,70,80,90];
 
-console.log(a.slice(2));                    //  [30,40,50,60,70,80,90];
+let a = [1,2,3,4,5,6,7,8,9];
 
-console.log(a.slice(2,7));                 // [ 30, 40, 50, 60, 70 ] due to last index is (n-1) so if n =7 the n-1 = 6.
+console.log(a.slice(2));                   //[ 3, 4, 5, 6, 7, 8, 9]
 
-console.log(a.slice(0,5));                  //[ 10, 20, 30, 40, 50 ]
+console.log(a.slice(4,8));                 //[ 5, 6, 7, 8]        bcz last index is "n-1"
+
+console.log(a.slice(2,6));                 //[3, 4, 5, 6]
+
+// Negative index in slice() method : --------------------------------------------
+
+let a = [10,20,30,40,50];
+
+console.log(a.slice(-2));               // [40,50]
+                                        // -2 ka mtlb hai : End se 2nd element se start karo.*/
 
 
 
-//Negative index : -2 ka mtlb -> End se 2nd element se start karo.
-console.log(a.slice(-2));                           // [ 80, 90 ]
+
+/*_____________________________ ######### Length property ############### ____________________________________________
+
+length : Ye array mein kitne elements hain, wo batata hai.
+
+let a = [10, 20, 30];
+
+console.log(a.length);           // 3
+
+
+//Array ko bada (increase ) karna 
+
+let a = [10, 20];
+
+a.length = 5;
+console.log(a);                   // [10, 20, <3 empty items>]   */
+
+
+
+
+/*
+_________________ ############## concat() method ################ __________________________________________
+
+The concat() method is used to concatenate two or more arrays and it gives the merged array.
+
+concat() ka used  do ya usse zyada arrays ko jod (combine) karne ke liye use hota hai.
+
+mportant: concat() original array ko modify nahi karta. Ye ek naya array return karta hai.
+
+Syntax : array1.concat(array2, array3, ...);   */
+
+//Example : 
+
+let a1 = [11, 12, 13];
+let a2 = [14, 15, 16];
+let a3 = [17, 18, 19];
+
+let newArr = a1.concat(a2, a3);
+console.log(newArr);                //[11, 12, 13, 14, 15, 16, 17, 18, 19]
