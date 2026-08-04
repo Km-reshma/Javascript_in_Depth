@@ -319,13 +319,65 @@ console.log(d);
 
 
 
+
 /*
-______________________ ######### reverse() method ############## _____________________________________
+__________________________ ######### reverse() method ##############_______________________________
 
+The reverse() method in JavaScript is used to reverse the order of elements in an array.
+
+reverse() method is used to reverses an array in place and returns the reference to the same array,
+the first array element now becoming the last, and the last array element becoming the first.
+
+Syntax : array.reverse();
+
+//Example. 1 :
+
+let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
+
+console.log(fruits);                          // [ 'Banana', 'Mango', 'Plum', 'Apple', 'Orange' ]
+
+console.log(fruits.reverse());                // [ 'Orange', 'Apple', 'Plum', 'Mango', 'Banana' ]
+
+
+// Example. 2 :
+
+let arr = [10,20,30,40,50];
+
+arr.reverse();
+
+console.log(arr);                             // [ 50, 40, 30, 20, 10 ]
+
+
+//*********** important *************   
+// reverse() changes the original array. The original array is reversed.
+
+
+
+2. Reverse a String---------------------------------------------------------------------
+
+Strings don't have a reverse() method. 
+(a). Convert the string to an array, 
+(b). reverse it, 
+(c). then join it back together.
+
+
+//Example :
+
+let str = "Hello";
+
+let reversed_Str = str.split("").reverse().join("");
+
+console.log(reversed_Str);                                    // output is : olleH
+
+
+//How does it works :-----------------------------------
+
+let str = "hello";
+                  
+console.log(str.split(""));                          // ["h", "e", "l", "l", "o"]
+console.log(str.split("").reverse());                // ["o", "l", "l", "e", "h"]
+console.log(str.split("").reverse().join(""));       // "olleh"
 */
-
-
-
 
 
 /*
@@ -349,7 +401,7 @@ console.log(message.includes("hello"));           //false, bcz "h" is small lett
 
 
 2. includes() with an Array--------------------> It checks if a specific element(means value ) is present in an array.
-*/
+
 //Example :
 
 let arr = [10,20,30,40,50];
@@ -357,3 +409,16 @@ let arr = [10,20,30,40,50];
 console.log(arr.includes(60));           // false
 
 console.log(arr.includes(30));          // true
+
+
+// Real example :
+
+let email = "user@gmail.com";
+
+if (email.includes("@")) {
+    console.log("Valid email format");
+} else {
+    console.log("Invalid email format");
+}
+
+*/
