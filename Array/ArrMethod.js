@@ -388,14 +388,19 @@ _____________________ ######### toReversed() method ############## _____________
 toReversed() ➜ does not change the original array. It returns a new reversed array.
 reverse() ➜ changes the original array.
 
-Syntax : array.toReversed();*/
+Syntax : array.toReversed();
 
 let arr =[10,20,30,40,50];
 
 let new_reversed_array = arr.toReversed();
-console.log(new_reversed_array);
 
-console.log(arr);
+console.log(new_reversed_array);                     //[ 50, 40, 30, 20, 10 ]
+
+console.log(arr);                                    //[ 10, 20, 30, 40, 50 ]
+*/
+
+
+
 
 
 /*
@@ -440,3 +445,58 @@ if (email.includes("@")) {
 }
 
 */
+
+
+
+
+/*
+_______________________########### at() method ############## _____________________________________________
+
+at() method is used to acces(get) the element  at a specific index from an array or a String.
+
+It also supports negative indexes (-ve), so you can easily access elements from the end.
+
+Syntax : array.at(index);
+
+Easy way to remember:
+
+ 0   → First item
+ 1   → Second item
+-1   → Last item
+-2   → Second last item   
+
+//Example 1 :  Array 
+
+let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
+
+console.log(fruits.at(2));            // Plum
+
+console.log(fruits.at(-1));           // Orange
+
+console.log(fruits.at(-2));           //Apple
+
+console.log(fruits.at(7));                     // no error show only undefined bcz index 7 is not present in the array.
+
+console.log(fruits[12]);                   // undefined bcz index 12 is not present in the array.
+
+
+
+//Example 2:  It is applicable on String also
+
+let str = "Hello World";
+
+console.log(str.at(6));                     // w
+
+console.log(str.at(5));                     // blank space 
+
+console.log(str.at(-1));                   // d
+
+console.log(str.at(-3));                   // r
+
+console.log(str.at(12));                    // undefined bcz index 12 is not present in the string.
+
+"""""" at() is especially useful when you need the last or second-last element
+       without writing expressions like array[array.length - 1].                     """""""""
+
+*/     
+
