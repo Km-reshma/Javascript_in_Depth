@@ -500,3 +500,92 @@ console.log(str.at(12));                    // undefined bcz index 12 is not pre
 
 */     
 
+
+
+
+
+/*
+______________________________ ################ sort() method ############## ________________________________________
+
+The sort() method is used to sort the elements of an array in place and 
+returns the reference to the " same array(original array is sorted) ", now sorted. 
+By default, it sorts elements as strings (alphabetically) and order is ascending.
+
+Synrax : array.sort();
+
+//Example 1 :  Sort an array of strings
+
+let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
+
+fruits.sort();
+
+console.log(fruits);         // output is : [ 'Apple', 'Banana', 'Mango', 'Orange', 'Plum' ]   bcz by default sort() method sort elements as strings (alphabetically) and order is ascending.   
+
+
+
+//Example 2 :  Sort an array of numbers
+
+let numbers = [10, 5, 100, 25];
+
+numbers.sort();
+
+console.log(numbers);           // output is : [ 10, 100, 25, 5 ]   bcz by default sort() method sort elements as strings (alphabetically) and order is ascending.  
+
+
+❌ This is not correct numeric order!
+
+Why? bcz By default, sort() converts numbers to strings:
+
+"10"
+"100"
+"25"
+"5"
+
+Then it sorts them alphabetically.  like first character of the string is compared, then second character and so on. like 1 0, 1 0 0, 2 5, 5.
+
+*/
+
+
+
+
+/*_______________________ ############ sort() method with compare function ############## _____________________________________________
+
+if you perform sort() on an array of numbers, it will not sort them correctly.
+To sort numbers correctly, you will use a compare function with the sort() method.
+
+Syntax : array.sort(compareFunction);
+
+//Example 1 : Sort an array of numbers in ascending order
+
+let num1 = [10, 5, 100, 25];
+
+num1.sort((a, b) => a- b);
+
+console.log(num1);                                    // [ 5, 10, 25, 100 ]
+
+
+//Explanation : given array : [10, 5, 100, 25]
+
+Compare 10 and 5 :
+a = 10
+b = 5
+
+a - b = 10 - 5 = 5
+
+Result is positive (5).
+
+Rule: Positive means put b before a.
+
+So:  5 comes before 10   
+
+
+
+//Example 2 : Sort an array of numbers in descending order
+
+let num2 = [10, 5, 100, 25];
+
+num2.sort((a, b) => b - a);
+
+console.log(num2);                                    // [ 100, 25, 10, 5 ]
+
+*/
