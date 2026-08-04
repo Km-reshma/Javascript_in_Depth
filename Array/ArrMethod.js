@@ -317,3 +317,43 @@ console.log(d);
 
 */
 
+
+
+/*
+______________________ ######### reverse() method ############## _____________________________________
+
+*/
+
+
+
+
+
+/*
+______________________ ######### includes() method ############## _____________________________________
+
+The includes() method in JavaScript is used to check if something exists in a string or an array.
+
+1. includes() with a String--------------------> It checks if a word or letter is present in a string.
+
+Syntax : string.includes("text");
+
+//Example :
+
+let message = "Hello World";
+
+console.log(message.includes("Hello"));           //true
+
+console.log(message.includes("llo Wo"));          //true
+
+console.log(message.includes("hello"));           //false, bcz "h" is small letter and "H" is capital letter so it is case sensitive.
+
+
+2. includes() with an Array--------------------> It checks if a specific element(means value ) is present in an array.
+*/
+//Example :
+
+let arr = [10,20,30,40,50];
+
+console.log(arr.includes(60));           // false
+
+console.log(arr.includes(30));          // true
