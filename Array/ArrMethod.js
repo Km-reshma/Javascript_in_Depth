@@ -589,3 +589,63 @@ num2.sort((a, b) => b - a);
 console.log(num2);                                    // [ 100, 25, 10, 5 ]
 
 */
+
+
+
+
+
+/*
+______________________############## toString() and join() method ############## 
+
+The toString() method in JavaScript converts a value into a string using comma as a separator. 
+It is used to convert an array into a string representation.
+It works with arrays, numbers, booleans, and many other data types.
+
+
+
+The join() method is used to join the elements of an array into a string, using a specified separator. 
+It allows you to customize the separator between the elements.
+
+   """""""""               toString() always uses commas.
+                            join() lets you choose the separator.             """"""""""""
+
+
+*/
+//Example 1 : toString() method  with an Array-------------------------------------------------
+
+let fruits1 = ["Banana", "Mango", "Plum", "Apple", "Orange"];
+
+console.log(fruits1.toString());                 // output is : Banana,Mango,Plum,Apple,Orange
+
+
+//Example 2 : join() method -------------------------------------------------
+
+let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
+
+console.log(fruits.join());                    //Banana,Mango,Plum,Apple,Orange
+
+console.log(fruits.join(""));                  //BananaMangoPlumAppleOrange
+
+console.log(fruits.join("  "));               //Banana  Mango  Plum  Apple  Orange
+
+console.log(fruits.join("_"));                // Banana_Mango_Plum_Apple_Orange
+
+console.log(fruits.join(" @ "));              //Banana @ Mango @ Plum @ Apple @ Orange
+
+
+//--------------------------------------------------------------------------------
+
+//Example 3 : toString() with a Boolean
+
+let value = true;
+
+console.log(value.toString());                //"true"
+
+
+//Example 4 : toString() with a Number
+
+let num = 123;
+
+console.log(num.toString());                 // "123"
+
+
