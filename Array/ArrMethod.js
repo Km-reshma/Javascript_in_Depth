@@ -380,6 +380,24 @@ console.log(str.split("").reverse().join(""));       // "olleh"
 */
 
 
+
+
+/*
+_____________________ ######### toReversed() method ############## ________________________________________
+
+toReversed() ➜ does not change the original array. It returns a new reversed array.
+reverse() ➜ changes the original array.
+
+Syntax : array.toReversed();*/
+
+let arr =[10,20,30,40,50];
+
+let new_reversed_array = arr.toReversed();
+console.log(new_reversed_array);
+
+console.log(arr);
+
+
 /*
 ______________________ ######### includes() method ############## _____________________________________
 
