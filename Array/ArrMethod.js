@@ -920,7 +920,7 @@ It creates a new array with one element changed, without modifying the original 
 Syntax :  " array.with(index, newValue); "
 
 index → Position of the element to replace.
-newValue → New value to put at that position. */
+newValue → New value to put at that position. 
 
 //Example 1 : 
 
@@ -949,3 +949,31 @@ console.log(newNumbers);
 // Difference Between with() and Direct Assignment :
 //with() method      = The original array stays the same, and you get a new array with the updated value.
 //direct assignemnet = original array is changed.
+*/
+
+
+
+
+
+/*
+_______________________ ############ copyWithin() method ################# _________________________________
+
+The copyWithin() method copies existing elements to another position in the same array.
+It changes the original array.
+"Copy some items from this array and paste them somewhere else in the same array."
+
+Syntax : array.copyWithin(target, start, end);
+
+Parameters :
+target → Where to paste the copied elements.
+start → Where to start copying from.
+end (optional) → Where to stop copying (not included).*/
+
+
+//Example 1:
+const arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+
+console.log(arr.copyWithin(0, 1 , 4));       // ['b', 'c', 'd', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k']
+
+console.log(arr.copyWithin(3, 8 ));         //['b', 'c', 'd', 'i','j', 'k', 'g', 'h', 'i', 'j', 'k']
+
