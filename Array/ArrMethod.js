@@ -983,6 +983,50 @@ console.log(arr.copyWithin(3, 8 ));         //['b', 'c', 'd', 'i','j', 'k', 'g',
 
 
 /*
+___________________ ############# fill() method ############### __________________________________________
+
+fill() method is used to fill the full array or some part of the array with the same value.
+
+Syntax : array.fill(value, start, end);
+
+Parameters
+value → The value to put in the array.
+start (optional) → Index where filling starts (default is 0).
+end (optional) → Index where filling stops (not included). Default is the array's length.*/
+
+//Example 1: Fill the whole array
+
+let arr = [1,2,3,4,5];
+
+console.log(arr.fill(0));                            //[ 0, 0, 0, 0, 0 ]
+                                                     //Think of it like replacing every element with 0.
+
+//Example 2: Fill only part of the array
+
+let arr1 = [1,2,3,4,5];
+
+console.log(arr1.fill(9,1,4));                       //[ 1, 9, 9, 9, 5 ]
+
+
+//Example 3: Create an array with the same value
+
+let arr2 = new Array(5).fill(10);
+
+console.log(arr2);                                     //[ 10, 10, 10, 10, 10 ]. This is a common way to create an array filled with a default value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 _______________________ ############### every() method ################## ________________________________________________
 
 The every() method returns false if it finds an element in the array that
