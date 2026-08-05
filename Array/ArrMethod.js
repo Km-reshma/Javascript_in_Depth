@@ -770,7 +770,7 @@ _______________________ ######### keys() method ############# __________________
 The keys() method in JavaScript returns an iterator that gives you the indexes (keys) of an array.
 like : Give me all the index numbers of this array. similar as the values() meyhpd bt return the only keys not values 
 
-Syntax : array.keys(); */
+Syntax : array.keys(); 
 
 // Example : 1
 
@@ -795,3 +795,66 @@ for (let index of fruits.keys()) {
 Output:  0
          1
          2
+*/
+
+         
+
+
+
+/*
+______________________ ########### entries() method ############## ____________________________________
+
+entries() method returns an iterator that gives both the index and the value of each array element.
+like :  "Give me both the position and the value."
+
+syntax : array.entries();
+
+//Example : 1 
+
+let fruits = ["apple", "banana", "mango"];
+
+let iterator = fruits.entries();
+
+console.log(iterator.next());             //{ value: [ 0, 'apple' ], done: false }
+console.log(iterator.next());             //{ value: [ 1, 'banana' ], done: false }
+console.log(iterator.next());             //{ value: [ 2, 'mango' ], done: false }
+console.log(iterator.next());             //{ value: undefined, done: true }
+
+//Example 2: Using for...of (Most Common)
+
+let fruits1 = ["apple", "banana", "mango"];
+
+for( let [index, values] of fruits1.entries()){
+
+    console.log([index, values]);
+}
+
+output is : [ 0, 'apple' ]
+            [ 1, 'banana']
+            [ 2, 'mango' ]
+*/
+
+
+
+
+
+/*
+keys() vs values() vs entries()_______________________________________________________________________________
+
+let fruits = ["apple", "banana", "mango"];
+l
+Method	Returns: 
+
+keys()	                   0, 1, 2
+values()	               "apple", "banana", "mango"
+entries()	               [0, "apple"], [1, "banana"], [2, "mango"]            
+
+*/
+//Example for difference between values(), keys(), enteries() , and here we used spread operatoe (...)
+
+let fruits = ["apple", "banana"];
+
+console.log([...fruits.keys()]);              //[ 0, 1 ]
+console.log([...fruits.values()]);            //[ 'apple', 'banana' ]
+console.log([...fruits.entries()]);           //[ [ 0, 'apple' ], [ 1, 'banana' ] ]
+
