@@ -877,7 +877,6 @@ Syntax:
                  });
  
 Or using an arrow function:  " array.some((element) => condition);   "" 
-*/
 
 //Example 1 : Check if Any Number is Greater Than 10
 
@@ -902,3 +901,51 @@ console.log(even_res);                                          // true
 let even_res1 =((element)=> element %2 == 0);
 
 console.log(arr.some(even_res1));                             // true 
+*/
+
+
+
+
+
+
+/*
+___________________ ############# with() method #############______________________________________________
+
+with() method is used to , you can update a single element in an array and then apply other array methods.
+
+The with() method is a modern JavaScript array method.
+
+It creates a new array with one element changed, without modifying the original array. original array remains same.
+
+Syntax :  " array.with(index, newValue); "
+
+index → Position of the element to replace.
+newValue → New value to put at that position. */
+
+//Example 1 : 
+
+let arr = [1,2,3,4,5];
+
+console.log(arr.with(2,6));       // [ 1, 2, 6, 4, 5 ] , 6 is put at the index of 2, this is not modify in origin creates only copy 
+
+console.log(arr.with(4,10));      // [ 1, 2, 3, 4, 10 ] , 4 is put at the index of 10, this is not modify in origin creates only copy 
+
+console.log(arr);                 // [ 1, 2, 3, 4, 5 ]  , no original array changed
+
+
+//Example 2: Negative Index ,      Like at(), with() supports negative indexes.
+
+let numbers = [10, 20, 30, 40];
+
+let newNumbers = numbers.with(-1, 100);        //[ 10, 20, 30, 100 ]
+
+console.log(newNumbers);
+
+//Here:
+//-1  : Last element
+//-2  : Second last element
+
+
+// Difference Between with() and Direct Assignment :
+//with() method      = The original array stays the same, and you get a new array with the updated value.
+//direct assignemnet = original array is changed.
