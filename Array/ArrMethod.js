@@ -967,7 +967,7 @@ Syntax : array.copyWithin(target, start, end);
 Parameters :
 target → Where to paste the copied elements.
 start → Where to start copying from.
-end (optional) → Where to stop copying (not included).*/
+end (optional) → Where to stop copying (not included).
 
 
 //Example 1:
@@ -976,4 +976,55 @@ const arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
 console.log(arr.copyWithin(0, 1 , 4));       // ['b', 'c', 'd', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k']
 
 console.log(arr.copyWithin(3, 8 ));         //['b', 'c', 'd', 'i','j', 'k', 'g', 'h', 'i', 'j', 'k']
+*/
 
+
+
+
+
+/*
+_______________________ ############### every() method ################## ________________________________________________
+
+The every() method returns false if it finds an element in the array that
+does not satisfy the provided testing function. Otherwise, it returns true.
+
+The every() method in JavaScript checks whether all elements in an array satisfy a condition.
+
+
+Like : "Does every item match this condition?"
+
+✅ If all elements match → true
+❌ If even one element doesn't match → false
+
+Syntax : Similar as the some() method 
+
+array.every(function(element) {
+    return condition;
+});
+
+Or using an arrow function:   "" array.every((element) => condition);   ""
+
+//Example :
+
+let arr = [1,39,39,29,10,13];
+
+let isBelow = arr.some(num => num < 40);
+
+console.log(isBelow);                                // true
+
+
+//Example 2 :
+
+let numbers = [15, 20, 5];
+
+let result = numbers.every(num => num > 10);
+
+console.log(result);                        // false, bcz all number does not satisfy that condition
+
+
+//Comparison between some() and every() method :
+
+Method	            Returns                         
+some()	            true if at least one matches	   
+every()	            true only if all match	            
+*/
