@@ -992,7 +992,7 @@ Syntax : array.fill(value, start, end);
 Parameters
 value → The value to put in the array.
 start (optional) → Index where filling starts (default is 0).
-end (optional) → Index where filling stops (not included). Default is the array's length.*/
+end (optional) → Index where filling stops (not included). Default is the array's length.
 
 //Example 1: Fill the whole array
 
@@ -1013,15 +1013,7 @@ console.log(arr1.fill(9,1,4));                       //[ 1, 9, 9, 9, 5 ]
 let arr2 = new Array(5).fill(10);
 
 console.log(arr2);                                     //[ 10, 10, 10, 10, 10 ]. This is a common way to create an array filled with a default value.
-
-
-
-
-
-
-
-
-
+*/
 
 
 
@@ -1072,3 +1064,47 @@ Method	            Returns
 some()	            true if at least one matches	   
 every()	            true only if all match	            
 */
+
+
+
+
+
+/*
+_____________________ ############## flat() method ################## ____________________________________
+
+The flat() method is used to convert a nested array (array inside an array) into a single, flatter array.
+""" flat() removes one or more levels of nested arrays and returns a new flat array. """"
+
+Syntax: array.flat();   
+
+flat()               : Opens 1 inside nested array.
+flat(2)              : Opens 2 inside nested array.
+flat(Infinity)       : Opens all inside nested array.
+
+Important Points :
+
+Works on arrays.
+Returns a new array.
+Does not change the original array.
+Removes nested array levels.*/
+
+//Example 1: Flatten one level
+
+let arr1 = [[1, 2], [3, 4]];
+let result = arr1.flat();
+console.log(result);                                     // [ 1, 2, 3, 4 ]
+
+//Example 2: Nested arrays
+
+let arr2 = [1, [2, 3], 4];
+console.log(arr2.flat());                                // [ 1, 2, 3, 4 ]
+
+//Example 3: Flatten two levels
+
+let arr3 = [1, [2, [3, 4]]];
+console.log(arr3.flat(2));                                //[ 1, 2, 3, 4 ]
+
+//Example 4: Flatten all levels
+
+let arr4 = [1, [2, [3, [4, 5]]]];
+console.log(arr4.flat(Infinity));                        // [ 1, 2, 3, 4, 5 ]
