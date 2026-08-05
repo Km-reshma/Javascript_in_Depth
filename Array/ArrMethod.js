@@ -686,4 +686,75 @@ let date = new Date();
 console.log(date.toLocaleString());                     // 5/8/2026, 1:36:34 pm
 
 The format changes based on your location.
+
+
+
+************difference between toString() and toLocaleString()**************
+
+toString() → Just convert to values or elements into the string representation.
+toLocaleString() → Convert to text or values with local formatting (commas, currency, date format, etc.)
 */
+
+
+
+
+
+
+/*
+__________________________ ######### values() method ############### _____________________________________
+
+values() method is used to return an iterator object that contains the values of the array.
+
+syntax : array.values();
+
+What is an Iterator?
+An iterator is an object that gives you one value at a time.
+
+// Example : of an Iterator object
+
+let arr = [10,20,30];
+
+let iterator = arr.values();
+
+console.log(iterator.next());             // { value: 10, done: false }
+
+
+//Example 1 : Basic usage of values() metjod
+
+let Animals = ["cow", "dog", "cat", "sheep", "lion" ];
+
+let iterator = Animals.values();
+
+console.log(iterator.next());              //{ value: 'cow', done: false }
+console.log(iterator.next());              //{ value: 'dog', done: false }
+console.log(iterator.next());              //{ value: 'cat', done: false }
+console.log(iterator.next());              // { value: 'sheep', done: false }
+console.log(iterator.next());              // { value: 'lion', done: false }
+console.log(iterator.next());              // { value: undefined, done: true }  bcz array mein aur koi element nahi hai isliye value undefined and done true show ho raha hai.
+
+
+Exaplanation : 
+
+value                     Current element.
+done : false              More elements are available.
+done : true               No more elements.
+
+
+
+Example 2: Using for...of (Most Common)-----------------------------------------------------------*/
+
+""""    This is the easiest way to use values().   """"
+
+
+let Animals = ["cow", "dog", "cat", "sheep", "lion" ];
+
+for (let value of Animals.values()){
+    console.log(value);   
+    
+}
+//output is : cow
+              dog
+              cat
+              sheep
+              lion
+
