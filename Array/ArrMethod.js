@@ -578,7 +578,10 @@ Rule: Positive means put b before a.
 
 So:  5 comes before 10   
 
-
+compareFn(a, b) return value	                 sort order
+> 0	                                             sort a after b,   e.g., [b, a]
+< 0	                                             sort a before b,  e.g., [a, b]
+=== 0	                                         keep original order of a and b
 
 //Example 2 : Sort an array of numbers in descending order
 
@@ -610,7 +613,7 @@ It allows you to customize the separator between the elements.
                             join() lets you choose the separator.             """"""""""""
 
 
-*/
+
 //Example 1 : toString() method  with an Array-------------------------------------------------
 
 let fruits1 = ["Banana", "Mango", "Plum", "Apple", "Orange"];
@@ -647,5 +650,40 @@ console.log(value.toString());                //"true"
 let num = 123;
 
 console.log(num.toString());                 // "123"
+*/
 
 
+
+
+/*
+_________________________ ######### toLocaleString() method ############### _________________________________
+
+The toLocaleString() method is used to convert a " value "   into a  " string "  according to a specific language and local format.
+It is mainly used for numbers, dates, and currencies.
+
+1. toLocaleString() with Numbers----------------------------------------------------------------
+
+let num = 1000000;
+console.log(num.toLocaleString());              //Output : 10,00,000 (depends on your system location)
+
+//For India:     10,00,000
+//For the USA:   1,000,000
+
+//It automatically adds commas according to the region.
+
+2. Using Indian Number Format------------------------------------------------------------------
+You can specify the locale:
+
+let num = 1000000;
+console.log(num.toLocaleString("en-IN"));                 //10,00,000
+console.log(num.toLocaleString("en-US"));                 //1,000,000
+console.log(num.toLocaleString("en-AU"));                 //1,000,000
+
+
+3. toLocaleString() with Date----------------------------------------------------------------
+
+let date = new Date();
+console.log(date.toLocaleString());                     // 5/8/2026, 1:36:34 pm
+
+The format changes based on your location.
+*/
