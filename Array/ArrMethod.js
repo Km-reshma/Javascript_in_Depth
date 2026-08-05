@@ -741,7 +741,7 @@ done : true               No more elements.
 
 
 
-Example 2: Using for...of (Most Common)-----------------------------------------------------------*/
+Example 2: Using for...of (Most Common)----------------------------------------------------------------------
 
 """"    This is the easiest way to use values().   """"
 
@@ -757,4 +757,41 @@ for (let value of Animals.values()){
               cat
               sheep
               lion
+*/
 
+
+
+
+
+
+/*
+_______________________ ######### keys() method ############# ________________________________________________
+
+The keys() method in JavaScript returns an iterator that gives you the indexes (keys) of an array.
+like : Give me all the index numbers of this array. similar as the values() meyhpd bt return the only keys not values 
+
+Syntax : array.keys(); */
+
+// Example : 1
+
+let fruits = ["Apple", "Banana", "Plum", "Peach"];
+let iterator = fruits.keys();
+
+console.log(iterator.next());       // { value: 0, done: false }
+console.log(iterator.next());       // { value: 1, done: false 
+console.log(iterator.next());       // { value: 2, done: false }
+console.log(iterator.next());       // { value: 3, done: false }
+console.log(iterator.next());       // { value: undefined, done: true }
+
+
+//Example 2: Using for...of (Most Common)
+
+let fruits = ["apple", "banana", "mango"];
+
+for (let index of fruits.keys()) {
+    console.log(index);
+}
+
+Output:  0
+         1
+         2
