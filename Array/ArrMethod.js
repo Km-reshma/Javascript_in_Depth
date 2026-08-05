@@ -849,7 +849,7 @@ keys()	                   0, 1, 2
 values()	               "apple", "banana", "mango"
 entries()	               [0, "apple"], [1, "banana"], [2, "mango"]            
 
-*/
+
 //Example for difference between values(), keys(), enteries() , and here we used spread operatoe (...)
 
 let fruits = ["apple", "banana"];
@@ -857,4 +857,48 @@ let fruits = ["apple", "banana"];
 console.log([...fruits.keys()]);              //[ 0, 1 ]
 console.log([...fruits.values()]);            //[ 'apple', 'banana' ]
 console.log([...fruits.entries()]);           //[ [ 0, 'apple' ], [ 1, 'banana' ] ]
+*/
 
+
+
+
+
+
+/*
+______________________ ########### some() method ############## ___________________________________________
+
+The some() method returns true if it finds an element in the array that 
+satisfies the provided testing function or testing condition. Otherwise, it returns false.
+
+Syntax: 
+
+                 array.some(function(element) {
+                        return condition;
+                 });
+ 
+Or using an arrow function:  " array.some((element) => condition);   "" 
+*/
+
+//Example 1 : Check if Any Number is Greater Than 10
+
+let number = [2,5,8,11];
+
+let result = number.some(num => num > 10);
+
+console.log(result);                    // true , bcz 11 is  greater than 10 and present in array 
+
+
+//Example 2 : Checks whether an element is even
+
+let arr = [1,2,3,4,5];
+
+let even_res = arr.some((element)=> element %2 == 0); 
+
+console.log(even_res);                                          // true
+
+
+// or we also defined as ither way 
+
+let even_res1 =((element)=> element %2 == 0);
+
+console.log(arr.some(even_res1));                             // true 
