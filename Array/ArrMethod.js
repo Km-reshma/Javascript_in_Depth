@@ -434,7 +434,7 @@ console.log(arr.includes(60));           // false
 console.log(arr.includes(30));          // true
 
 
-// Real example :
+// Real example :------------------------------------------------------------------------------------
 
 let email = "user@gmail.com";
 
@@ -465,7 +465,7 @@ Easy way to remember:
 -1   → Last item
 -2   → Second last item   
 
-//Example 1 :  Array 
+//Example 1 :  Array ---------------------------------------------------------------------------------
 
 let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
 
@@ -481,7 +481,7 @@ console.log(fruits[12]);                   // undefined bcz index 12 is not pres
 
 
 
-//Example 2:  It is applicable on String also
+//Example 2:  It is applicable on String also------------------------------------------------------------
 
 let str = "Hello World";
 
@@ -513,7 +513,7 @@ By default, it sorts elements as strings (alphabetically) and order is ascending
 
 Synrax : array.sort();
 
-//Example 1 :  Sort an array of strings
+//Example 1 :  Sort an array of strings----------------------------------------------------------
 
 let fruits = ["Banana", "Mango", "Plum", "Apple", "Orange"];
 
@@ -523,7 +523,7 @@ console.log(fruits);         // output is : [ 'Apple', 'Banana', 'Mango', 'Orang
 
 
 
-//Example 2 :  Sort an array of numbers
+//Example 2 :  Sort an array of numbers---------------------------------------------------------------
 
 let numbers = [10, 5, 100, 25];
 
@@ -555,7 +555,7 @@ To sort numbers correctly, you will use a compare function with the sort() metho
 
 Syntax : array.sort(compareFunction);
 
-//Example 1 : Sort an array of numbers in ascending order
+//Example 1 : Sort an array of numbers in ascending order-------------------------------------------
 
 let num1 = [10, 5, 100, 25];
 
@@ -583,7 +583,7 @@ compareFn(a, b) return value	                 sort order
 < 0	                                             sort a before b,  e.g., [a, b]
 === 0	                                         keep original order of a and b
 
-//Example 2 : Sort an array of numbers in descending order
+//Example 2 : Sort an array of numbers in descending order-----------------------------------
 
 let num2 = [10, 5, 100, 25];
 
@@ -638,14 +638,14 @@ console.log(fruits.join(" @ "));              //Banana @ Mango @ Plum @ Apple @ 
 
 //--------------------------------------------------------------------------------
 
-//Example 3 : toString() with a Boolean
+//Example 3 : toString() with a Boolean------------------------------------------------------
 
 let value = true;
 
 console.log(value.toString());                //"true"
 
 
-//Example 4 : toString() with a Number
+//Example 4 : toString() with a Number-------------------------------------------------------
 
 let num = 123;
 
@@ -719,7 +719,7 @@ let iterator = arr.values();
 console.log(iterator.next());             // { value: 10, done: false }
 
 
-//Example 1 : Basic usage of values() metjod
+//Example 1 : Basic usage of values() metjod-----------------------------------------------
 
 let Animals = ["cow", "dog", "cat", "sheep", "lion" ];
 
@@ -772,7 +772,7 @@ like : Give me all the index numbers of this array. similar as the values() meyh
 
 Syntax : array.keys(); 
 
-// Example : 1
+// Example : 1-----------------------------------------------------
 
 let fruits = ["Apple", "Banana", "Plum", "Peach"];
 let iterator = fruits.keys();
@@ -784,7 +784,7 @@ console.log(iterator.next());       // { value: 3, done: false }
 console.log(iterator.next());       // { value: undefined, done: true }
 
 
-//Example 2: Using for...of (Most Common)
+//Example 2: Using for...of (Most Common)------------------------------------
 
 let fruits = ["apple", "banana", "mango"];
 
@@ -809,7 +809,7 @@ like :  "Give me both the position and the value."
 
 syntax : array.entries();
 
-//Example : 1 
+//Example : 1 -----------------------------------------------------------------
 
 let fruits = ["apple", "banana", "mango"];
 
@@ -820,7 +820,7 @@ console.log(iterator.next());             //{ value: [ 1, 'banana' ], done: fals
 console.log(iterator.next());             //{ value: [ 2, 'mango' ], done: false }
 console.log(iterator.next());             //{ value: undefined, done: true }
 
-//Example 2: Using for...of (Most Common)
+//Example 2: Using for...of (Most Common)--------------------------------------------
 
 let fruits1 = ["apple", "banana", "mango"];
 
@@ -878,7 +878,7 @@ Syntax:
  
 Or using an arrow function:  " array.some((element) => condition);   "" 
 
-//Example 1 : Check if Any Number is Greater Than 10
+//Example 1 : Check if Any Number is Greater Than 10---------------------------------------------
 
 let number = [2,5,8,11];
 
@@ -887,7 +887,7 @@ let result = number.some(num => num > 10);
 console.log(result);                    // true , bcz 11 is  greater than 10 and present in array 
 
 
-//Example 2 : Checks whether an element is even
+//Example 2 : Checks whether an element is even-------------------------------------------------------
 
 let arr = [1,2,3,4,5];
 
@@ -922,7 +922,7 @@ Syntax :  " array.with(index, newValue); "
 index → Position of the element to replace.
 newValue → New value to put at that position. 
 
-//Example 1 : 
+//Example 1 : --------------------------------------------------------------------
 
 let arr = [1,2,3,4,5];
 
@@ -933,7 +933,7 @@ console.log(arr.with(4,10));      // [ 1, 2, 3, 4, 10 ] , 4 is put at the index 
 console.log(arr);                 // [ 1, 2, 3, 4, 5 ]  , no original array changed
 
 
-//Example 2: Negative Index ,      Like at(), with() supports negative indexes.
+//Example 2: Negative Index , Like at(), with() supports negative indexes.--------------------------
 
 let numbers = [10, 20, 30, 40];
 
@@ -970,7 +970,7 @@ start → Where to start copying from.
 end (optional) → Where to stop copying (not included).
 
 
-//Example 1:
+//Example 1:------------------------------------------------------------------
 const arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
 
 console.log(arr.copyWithin(0, 1 , 4));       // ['b', 'c', 'd', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k']
@@ -994,7 +994,7 @@ value → The value to put in the array.
 start (optional) → Index where filling starts (default is 0).
 end (optional) → Index where filling stops (not included). Default is the array's length.
 
-//Example 1: Fill the whole array
+//Example 1: Fill the whole array-------------------------------------------------
 
 let arr = [1,2,3,4,5];
 
@@ -1008,7 +1008,7 @@ let arr1 = [1,2,3,4,5];
 console.log(arr1.fill(9,1,4));                       //[ 1, 9, 9, 9, 5 ]
 
 
-//Example 3: Create an array with the same value
+//Example 3: Create an array with the same value-------------------------------------
 
 let arr2 = new Array(5).fill(10);
 
@@ -1040,7 +1040,7 @@ array.every(function(element) {
 
 Or using an arrow function:   "" array.every((element) => condition);   ""
 
-//Example :
+//Example :------------------------------------------------------------
 
 let arr = [1,39,39,29,10,13];
 
@@ -1049,7 +1049,7 @@ let isBelow = arr.some(num => num < 40);
 console.log(isBelow);                                // true
 
 
-//Example 2 :
+//Example 2 :-----------------------------------------------------------
 
 let numbers = [15, 20, 5];
 
@@ -1086,7 +1086,7 @@ Important Points :
 Works on arrays.
 Returns a new array.
 Does not change the original array.
-Removes nested array levels.*/
+Removes nested array levels.
 
 //Example 1: Flatten one level
 
@@ -1108,3 +1108,131 @@ console.log(arr3.flat(2));                                //[ 1, 2, 3, 4 ]
 
 let arr4 = [1, [2, [3, [4, 5]]]];
 console.log(arr4.flat(Infinity));                        // [ 1, 2, 3, 4, 5 ]
+*/
+
+
+
+
+
+
+/*
+________________________ ########## reduce() method ##############__________________________________
+
+The reduce() method is used to combine all the elements of an array into a single value.
+"""" reduce() takes all the array elements and reduces them to one final value. """"
+
+That single value can be:
+
+A sum
+A product
+A string
+An object
+Another array
+------------------------------------------------------------------------
+Real-Life Example:  Imagine you have money:   ₹100 + ₹200 + ₹300 + ₹400
+
+Instead of adding them manually:    100 + 200 + 300 + 400 = 1000
+
+You can use reduce() to get the total.
+
+Syntax :-----------------------------------------
+
+arr.reduce((accumulator, cuurentValue) =>{
+
+    return accumulator + cuurentVlue;
+
+    }, initialValue);
+
+Parameters:----------------------------------
+
+accumulator → Stores the running result means data store like sum of array.
+currentValue → Current element of the array.
+initialValue → Starting value of the accumulator (initial value of sum =0).   
+
+
+
+//Example 1 :----------------------------------------------------
+let arr = [10,20,30,40];
+
+let sum = arr.reduce((accumulator, currentValue) => {
+     
+    return accumulator + currentValue ;
+
+}, 0);
+
+console.log(sum);                                    // 100;
+
+
+//Exaplanation : -------------------------------------------------------
+
+What is initialValue?
+}, 0);                Here, 0 is the initialValue.
+
+It means:   accumulator = 0
+
+The calculation starts from 0.
+--------------------------------------------------------------
+
+First Iteration : The first element is 10.
+
+accumulator = 0
+currentValue = 10
+
+Calculation: 0 + 10 = 10
+
+Now:accumulator = 10
+-----------------------------------------------------------------
+
+Second Iteration :The next element is 20.
+
+accumulator = 10
+currentValue = 20
+
+Calculation: 10 + 20 = 30
+
+Now:accumulator = 30
+-------------------------------------------------------------------
+
+Third Iteration : The next element is 30.
+
+accumulator = 30
+currentValue = 30
+
+Calculation: 30 + 30 = 60
+
+Now: accumulator = 60
+--------------------------------------------------------------------
+
+Fourth Iteration : The next element is 40.
+
+accumulator = 60
+currentValue = 40
+
+Calculation: 60 + 40 = 100
+
+Now:accumulator = 100
+
+*/
+
+//Example 2 :-------------------------------------------------------------------------------------------
+
+let arr1 = [1,2,3,4,5];
+
+let product = arr1.reduce((accumulator, currentValue) => {
+
+    return accumulator * currentValue;
+
+}, 1);
+
+console.log(product);                                   //120
+
+
+//Example 3 : Find the largest number---------------------------------------------
+let arr = [10, 50, 20, 80];
+
+let max = arr.reduce((larget, num) => {
+
+    return num > larget ? num : larget ;
+});
+
+console.log(max);                                       // 80
