@@ -1263,7 +1263,7 @@ arr.map((currentValue, index, array) => {
 Parameters : 
 currentValue  :                The current element being processed.
 index         :                The index of the current element (optional).
-array         :                The original array (optional).   */
+array         :                The original array (optional).   
 
 //Example 1 : Multiply each element by 2 in the array
 
@@ -1307,3 +1307,77 @@ let marks= [40,50,60,70,80];
 let updateMarks = marks.map((mark) => mark + 5);
 
 console.log(updateMarks);                       //[ 45, 55, 65, 75, 85 ]
+*/
+
+
+
+
+
+/*
+______________________ ############# filter() method ################# _____________________________________
+
+The filter() method is used to select only the elements that satisfy a condition 
+provided by a callback function and returns a new array.
+
+"""   filter() checks every element. If the condition is true, it keeps the element. 
+      If the condition is false, it removes the element.   """" 
+
+A new array with elements that pass the test. If no elements pass, returns an empty array.
+Original array is not changed.
+
+Syntax :
+array.filter((currentValue, index, array) => {
+    return condition;
+});      
+*/
+
+//Example 1 : Filter numbers greater than 10
+
+let numbers = [5,12,8,130,44,7,15];
+
+let res =   numbers.filter((num) => {             // or  numbers.filter((num) =>  num > 10 );
+
+    return num > 10;
+});
+console.log(res);                                //[ 12, 130, 44, 15 ]
+
+
+//Example 2: Filter even numbers
+
+let numbers1 = [1,2,3,4,5,6];
+
+let even = numbers1.filter((num) => {
+    return num % 2 == 0;
+});
+console.log(even);                               // [ 2, 4, 6 ]
+
+
+//Example 3: Filter names
+
+let names = ["Alice", "Bob", "Anita", "Aa","Sita"];
+
+let result = names.filter((name) => name.startsWith("A"));
+
+console.log(result);                           //[ 'Alice', 'Anita', 'Aa' ]
+
+
+//Example  4 : Filter objects by property
+
+let users =[
+    {  name: "Rama", age:30 },
+    {  name: "Sita", age:28 },
+    {  name: "Alice", age:15 },
+    {  name: "Bob", age:19 },
+    {  name: "David", age:17 }
+];
+
+let adults = users.filter((user) => user.age >= 18);
+
+console.log(adults);
+  
+//output is :
+[
+  { name: 'Rama', age: 30 },
+  { name: 'Sita', age: 28 },
+  { name: 'Bob', age: 19 }
+]
