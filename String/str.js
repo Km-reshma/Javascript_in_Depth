@@ -96,6 +96,24 @@ console.log(s1.charAt(5));               // empty output
 Both return the same character for valid indexes. But :
 charAt(10) → "" (empty string)
 str[10] → undefined
+
+
+
+//3. By using at() method : same as the chatAt() but support it negative index. 
+
+if index doest not exist then return undefined.
+
+let s1 = "Hello";
+console.log(s1.at(1));              //e
+console.log(s1.at(-1));             //o
+console.log(s1.at(-2));             //l
+console.log(s1.at(-6));             //undefined
+
+//Difference between [], charAt(), at() :-------------------------------------------
+
+Method	             Valid Index	      Invalid Index         	Negative Index
+
+charAt()	         Character	          "" (empty string)	        ❌ Not supported
+[]	                 Character	          undefined	                ❌ Not supported
+at()	             Character	          undefined              	✅ Supported
 */
-
-
