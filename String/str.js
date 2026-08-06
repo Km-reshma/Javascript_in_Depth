@@ -69,3 +69,33 @@ ________________________________________________________________________________
 */
 
 
+
+/* ___________________ ############# Access the String #################### _________________________________
+
+//1. Normal acces by index : //if index is does not exist then return undefined.
+
+let s1 = "Hello";
+console.log(s1[0]);               //H
+console.log(s1[1]);               //e
+console.log(s1[2]);               //l
+console.log(s1[3]);               //l
+console.log(s1[4]);               //o
+console.log(s1[5]);               //undefined
+
+
+//2. By using "chatAt(index)" : charAt() returns the character at a specific index in a string. 
+//if index is does not exist then return empty string("").
+
+//Syntax : str.charAt(index);
+
+console.log(s1.charAt(0));               //H
+console.log(s1.charAt(1));               //e
+console.log(s1.charAt(5));               // empty output 
+
+
+Both return the same character for valid indexes. But :
+charAt(10) → "" (empty string)
+str[10] → undefined
+*/
+
+
