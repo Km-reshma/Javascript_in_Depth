@@ -1212,7 +1212,6 @@ Calculation: 60 + 40 = 100
 
 Now:accumulator = 100
 
-*/
 
 //Example 2 :-------------------------------------------------------------------------------------------
 
@@ -1236,3 +1235,75 @@ let max = arr.reduce((larget, num) => {
 });
 
 console.log(max);                                       // 80
+*/
+
+
+
+
+
+
+/*
+____________________ ############## map() method ################## _______________________________
+
+The map() method is used to create a new array by changing each element of an existing array based on applying a  function/ callback function.
+
+map() is an Array method that creates a new array by applying a callback function to each element of the original array.
+It does not modify the original array.
+
+"""" map() goes through every element of an array, applies a function to it, and returns a new array. """"""
+
+Synatax: 
+
+arr.map((currentValue, index, array) => {
+
+    return newValue;
+    
+    })
+
+Parameters : 
+currentValue  :                The current element being processed.
+index         :                The index of the current element (optional).
+array         :                The original array (optional).   */
+
+//Example 1 : Multiply each element by 2 in the array
+
+let arr = [1,2,3,4,5];
+
+let twoMul = arr.map((num) => {
+
+    return num*2;
+});
+console.log(twoMul);                                //[ 2, 4, 6, 8, 10 ]
+
+
+//EXample 2 : Square each number
+
+let arr1 = [1,2,3,4,5];
+
+let square = arr1.map((num) => {
+
+    return num * num;
+});
+console.log(square);                           //[ 1, 4, 9, 16, 25 ]
+
+console.log(arr1);                             //[ 1, 2, 3, 4, 5 ]
+
+
+//Example 3: Convert names to uppercase
+
+let names = ["alice", "bob", "john", "ram", "sita"];
+
+let upperNames = names.map((names) => {      //or names.map((names => names.toUpperCase());
+    return names.toUpperCase();
+});
+
+console.log(upperNames);             //[ 'ALICE', 'BOB', 'JOHN', 'RAM', 'SITA' ]
+
+
+//Example 4: teacher add extra 5 marks to each student's marks
+
+let marks= [40,50,60,70,80];
+
+let updateMarks = marks.map((mark) => mark + 5);
+
+console.log(updateMarks);                       //[ 45, 55, 65, 75, 85 ]
