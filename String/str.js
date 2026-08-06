@@ -10,7 +10,7 @@ _______________  ########## Creating strings ############ ______________________
 Strings can be created as string literals, or as objects, using the String() constructor.
 There are 4 way to create a string.
 
-1. Double Quotes (") : ---------------------------------------------------------------------*/
+1. Double Quotes (") : ---------------------------------------------------------------------*
 
 let s1 = "Hello";
 console.log(s1);                            //Hello
@@ -36,6 +36,36 @@ console.log(s3);                       //Hello
 let s4 = new String("Hello");
 console.log(s4);                     //[String: 'Hello']
 
+//This is because new String() creates a String object (wrapper object), not a primitive string.
 
+
+//--------------------------------------------------------------------------------------------------------------
+
+//lets compare s1 ,s2, s3, s4 to find the difference :
+
+console.log(s1===s2);                     //true
+console.log(s1===s3);                     //true
+console.log(s1===s4);                     //false
+console.log(s2===s3);                     //true
+console.log(s2===s4);                     //false
+console.log(s3===s4);                     //false
+
+//but by s4 and s1 gives false let me check the datatype of the s1 and s4.at
+
+console.log(typeof(s1));                 //string
+console.log(typeof(s2));                 //string
+console.log(typeof(s3));                 //string
+console.log(typeof(s4));                 //object
+
+why s4 is show object ?
+
+The new keyword tells JavaScript:
+"Create a new object from the String constructor."
+
+So instead of storing just the text "Hello", JavaScript creates a String object that contains the text.
+
+But we recommended to use string literal( "", '', ``), instead of object/string constructor.
+_______________________________________________________________________________________________________________________________
+*/
 
 
