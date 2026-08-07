@@ -232,7 +232,7 @@ console.log(html);
     <p>Welcome</p>
 </div>
 
-*/
+
 
 //Nested quotes-----------------------------
 
@@ -241,5 +241,78 @@ let text1 = `He said "Hello"`;
 
 console.log(text);                         //It's a beautiful day.
 console.log(text1);                        //He said "Hello"
+*/
 
 
+
+
+/*
+//_____________________ ######## regular Expression ##############______________________________________
+
+A Regular Expression (Regex) is a pattern like (/pattern/)  which is used to search, find, replace, or validate text in a string.
+Regex is a smart way to search for specific types of data inside text.
+For example:
+
+Find all numbers in a sentence
+Check if an email is valid
+Check if a password follows rules
+Find specific words
+
+let text0 = "My age is 25";
+
+//normal search
+console.log(text0.includes("25"));
+
+//regex search we use match()
+console.log(text0.match(/\d+/));    //[ '25', index: 10, input: 'My age is 25', groups: undefined ]
+
+// \d means any digit (0-9)
+// + means one or more times
+// So it finds numbers automatically.
+
+whyy? [ '25', index: 10, input: 'My age is 25', groups: undefined ]
+
+because match() does not return only the matched value. It returns an array with extra information.
+
+M y   a g e   i s   2 5
+0 1 2 3 4 5 6 7 8 9 10 11
+
+The number "25" starts at index 10.
+
+------------------------------------------------------------------------------------------
+___________________________________________________
+| Pattern | Meaning                    | Example  |
+| ------- | -------------------------- | -------- |
+| `\d`    | Any digit (0-9)            | 123      |
+| `\w`    | Letter, number, underscore | A, 1, _  |
+| `\s`    | Space                      | " "      |
+| `.`     | Any single character       | a, 5, @  |
+| `^`     | Start of string            | `^Hello` |
+| `$`     | End of string              | `world$` |
+___________________________________________________
+
+
+
+
+Regex Flags:-------------------------
+
+Flags add extra instructions.
+Flag	          Meaning
+g	             Find all matches
+i	             Ignore uppercase/lowercase difference
+m	             Search in multiple lines
+*/
+
+
+//Example 1: Find Numbers
+let text1 = "I have 2 apples";
+console.log(text1.match(/\d+/));                         //[ '2', index: 7, input: 'I have 2 apples', groups: undefined ]
+
+//Example 2: Find Words Only
+let text2 = "Hello123";
+console.log(text2.match(/[a-zA-Z]+/));                 //[ 'Hello', index: 0, input: 'Hello123', groups: undefined ]
+
+
+//Exmaple 3: Regex Flags : g i m , g-find all match , i-ignore upper or lower case , m- seach in multiple lines
+let text = "Hello hello";
+console.log(text.match(/hello/gi));                      //[ 'Hello', 'hello' ]
