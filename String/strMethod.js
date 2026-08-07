@@ -45,3 +45,26 @@ let str = str1.concat(str2);
 console.log(str);                       //HelloAlice, if we write " let str = str1.concat(" ",str2); "
 
 console.log(str1.concat(" ",str2));      //Hello Alice                     if we add the empty string then gives the 1 space 
+
+
+
+
+/*
+//______________________ ############ includes() method ###############____________________________
+The includes() method checks whether a string contains a specific word or character.
+
+It returns:
+true   : if the text is found.
+false  : if the text is not found.
+
+Syntax: string.includes(searchString, startPosition);
+*/
+//Example 1 :
+let text = "JavaScript is awesome";
+console.log(text.includes("javaScript"));          //false
+console.log(text.includes("JavaScript"));          //true
+console.log(text.includes("some"));                //true
+
+//Example 2: 
+let text1 = "Hello World";
+console.log(text1.includes("World", 6));          //true    
