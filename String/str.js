@@ -117,3 +117,129 @@ charAt()	         Character	          "" (empty string)	        ❌ Not supporte
 []	                 Character	          undefined	                ❌ Not supported
 at()	             Character	          undefined              	✅ Supported
 */
+
+
+
+
+/*
+________________________ ######### backtick (`) ################### ________________________________________
+Backticks (`) were introduced in ES6 (ECMAScript 2015). They create template literals,
+which are a more powerful way to work with strings than single (') or double (") quotes.
+
+Three Ways to Create Strings :
+
+let s1 = "Hello";   // Double quotes
+let s2 = 'Hello';   // Single quotes
+let s3 = `Hello`;   // Backticks (Template Literal)
+
+Output:
+console.log(s1); // Hello
+console.log(s2); // Hello
+console.log(s3); // Hello
+
+All three create strings:
+
+console.log(typeof s1);
+console.log(typeof s2);
+console.log(typeof s3);
+
+Output:
+string
+string
+string
+
+So why do backticks exist?
+Because they provide extra features that ' and " don't.
+_______________________________________________________________________________________
+
+Feature 1: String Interpolation:----------------------------------
+
+Interpolation means inserting variables or expressions inside a string instead of using concatation/+.
+*/
+
+//Without backtick , using +
+
+let name = "John";
+
+let message = "Hello " + name ;
+
+console.log(message );                          // Hello John
+
+//with backtick (`)
+
+let name1 = "John";
+
+let msg = `Hello ${name1}`
+
+console.log(msg);                              // Hello John
+
+
+/*
+How does ${} work?
+
+The syntax is:    `${expression}`
+JavaScript evaluates the expression inside ${} and inserts its result into the string.
+
+1. template literals (backticks `) are preferred because they are easier to read and write.
+2. Easier to read : Instead of joining many strings with +, you write the sentence naturally.
+3. Less chance of mistakes : With concatenation, it's easy to forget spaces or +.
+4. Supports expressions : You can put any JavaScript expression inside ${}.
+5. Supports multi-line strings
+
+Without backticks:   let text = "Hello\nWorld";
+
+With backticks: let text = `Hello
+                World`;
+Output:
+Hello
+World
+
+//Example 2 :
+
+let a =10;
+let b =20;
+let c =a+b;
+let result = "Sum of " +a+ " and " +b+ " is " +c;
+console.log(result);                               //Sum of 10 and 20 is 30
+
+//With backtick
+
+let res = `sum of ${a} and ${b} is ${c}`;
+console.log(res);                               //Sum of 10 and 20 is 30
+
+let res1 = `sum of ${a+b}`;                     //sum of 30
+console.log(res1);
+
+console.log(`a*b is ${a*b}`);                   //a*b is 200
+
+console.log(`square of a = ${a*a}`);            //square of a = 100
+
+
+//Preserve Formating -----------------------
+
+let html = `
+<div>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</div>
+`;
+
+console.log(html);
+
+//output is : 
+<div>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</div>
+
+*/
+
+//Nested quotes-----------------------------
+
+let text = `It's a beautiful day.`;
+let text1 = `He said "Hello"`;
+
+console.log(text);                         //It's a beautiful day.
+console.log(text1);                        //He said "Hello"
+
+
