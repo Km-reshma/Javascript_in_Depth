@@ -153,7 +153,7 @@ Returns -1 if not found.
 Unlike indexOf(), it supports regular expressions (RegExp).  
 
 
-*/
+
 let str = "Hello World";
 console.log(str.search("H"));                        //0
 console.log(str.search("Hello"));                    //0
@@ -162,7 +162,7 @@ console.log(str.search("A"));                        //-1
 
 //regular Expression :
 console.log(str.search(/World/));                   //6
-
+*/
 
 
 
@@ -178,7 +178,7 @@ Syntax : string.match(pattern)
 
 2. matchAll() : matchAll() finds all matches and returns an iterator.
                 It is mainly used with regular expressions and the g flag
-Syntax : string.matchAll(regex)      */
+Syntax : string.matchAll(regex)      
 
 
 //---------------------------------------------------------------------------------------------------------------
@@ -205,8 +205,38 @@ let result = text2.matchAll(/at/g);
 console.log([...result]);                   //[...] converts the iterator into an array.
                                             
 //output is :
-/*[
+[
   [ 'at', index: 1, input: 'cat bat rat', groups: undefined ],
   [ 'at', index: 5, input: 'cat bat rat', groups: undefined ],
   [ 'at', index: 9, input: 'cat bat rat', groups: undefined ]
-]*/
+]
+*/
+
+
+
+
+
+
+/*
+______________________ ######## replace () and replaceAll() ###########  ___________________________________
+
+Both methods are used to replace text inside a string.
+1. replace() :
+It is used to replace characters or a sequence of characters in a string.
+Replaces the first match only. replace() replaces only the first occurrence
+
+2. replaceAll() :
+Replaces all matches. replaceAll() replaces every occurrence of a value.
+
+//Syntax : string.replace(oldValue, newValue);
+
+*/
+
+//Example 1 :
+let str = "I like Java";
+console.log(str.replace("Java", "Python"));                   //I like Python
+
+//Example 2 : Replaces all matches.
+let str1 = "cat cat cat";
+console.log(str1.replaceAll("cat", "dog"));                 //dog dog dog
+
