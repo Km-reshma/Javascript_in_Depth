@@ -230,8 +230,6 @@ Replaces all matches. replaceAll() replaces every occurrence of a value.
 
 //Syntax : string.replace(oldValue, newValue);
 
-*/
-
 //Example 1 :
 let str = "I like Java";
 console.log(str.replace("Java", "Python"));                   //I like Python
@@ -239,4 +237,36 @@ console.log(str.replace("Java", "Python"));                   //I like Python
 //Example 2 : Replaces all matches.
 let str1 = "cat cat cat";
 console.log(str1.replaceAll("cat", "dog"));                 //dog dog dog
+*/
+
+
+
+
+
+
+/*
+_____________ ########## slice() method ############# _______________________________________________________
+
+slice() is a method used to take a part of a string. like substring.
+It does not change the original string.
+It creates a new string with the selected characters.
+
+Syntax : string.slice(start, end);
+start : The position where you want to begin.
+end   : The position where you want to stop (this position is not included).
+
+*/
+
+//Example :
+
+let text = "JavaScript";
+let result = text.slice(0, 4);
+console.log(result);                        //Java
+
+//Example :
+let text1 = "JavaScript";
+console.log(text1.slice(4));               // output : Script, start with index 4 and by default goes to last index ifwe will not given the last index.
+
+//Negative Index 
+console.log(text.slice(-6));             //Script 
 
