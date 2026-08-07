@@ -255,8 +255,6 @@ Syntax : string.slice(start, end);
 start : The position where you want to begin.
 end   : The position where you want to stop (this position is not included).
 
-*/
-
 //Example :
 
 let text = "JavaScript";
@@ -269,4 +267,24 @@ console.log(text1.slice(4));               // output : Script, start with index 
 
 //Negative Index 
 console.log(text.slice(-6));             //Script 
+*/
 
+
+
+
+/*
+________________________ ############# substring() method ########### ___________________________________________
+
+substring() is a method used to get a part of a string.
+It does not change the original string.
+It returns a new string with the selected characters.
+it doest not support negative index but slice() method support negative index.
+
+"  substring(-2) → Treats -2 as 0, so returns "Hello"  "
+
+Syntax : string.substring(start, end);
+*/
+
+//Example 
+let text = "Hello";
+console.log(text.substring(1, 4));       //ell
