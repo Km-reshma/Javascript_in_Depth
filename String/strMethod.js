@@ -67,4 +67,41 @@ console.log(text.includes("some"));                //true
 
 //Example 2: 
 let text1 = "Hello World";
-console.log(text1.includes("World", 6));          //true    
+console.log(text1.includes("World", 6));          //true  
+
+
+
+
+/*
+//_____________________ ############ startsWith()and endsWith() method #############____________________________________________
+startsWith()   :   Checks if a string starts with specific text.
+endsWith()     :   Checks if a string ends with specific text.
+
+Both return:
+true    :  if the condition is true.
+false   :  otherwise.
+
+Synyax :
+string.startsWith(searchString)
+string.endsWith(searchString)
+*/
+
+//Example :
+
+let text3 = "JavaScript";
+
+console.log(text3.startsWith("Java"));                 //true
+console.log(text3.startsWith("java"));                 //false
+console.log(text3.startsWith("J"));                    //true
+
+console.log(text3.endsWith("Script"));                   //true
+console.log(text3.endsWith("ccript"));                   //false
+console.log(text3.endsWith("pt"));                       //true
+console.log(text3.endsWith("t"));                        //true
+
+console.log(text3.startsWith("Script", 4));              //true
+console.log(text3.startsWith("r",6));                    //true
+
+
+
+
