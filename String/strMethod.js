@@ -105,3 +105,34 @@ console.log(text3.startsWith("r",6));                    //true
 
 
 
+/*
+//_________________________ ######### indexOf() and lastIndexOf() ############## ________________________________________
+
+These methods help you find the position (index) of text in a string.
+indexOf()     : Finds the first occurrence.
+lastIndexOf() : Finds the last occurrence
+
+If the text is not found, both return -1.
+
+Syntax:
+string.indexOf(searchString)
+string.latIndexOf(searchString)
+*/
+
+//Example :
+
+let text4 = "Hello World";
+
+console.log(text4.indexOf("H"));                             //0
+console.log(text4.indexOf("Hello"));                         //0
+console.log(text4.indexOf(" World"));                        //5
+console.log(text4.indexOf("World"));                         //6
+console.log(text4.indexOf("d"));                            //10
+console.log(text4.indexOf("a"));                            //-1
+console.log(text4.indexOf("l"));                            //2
+console.log(text4.indexOf("o"));                            //4
+
+
+console.log(text4.lastIndexOf("l"));                        //9          last wala l count ua bcz its reads last occurences
+console.log(text4.lastIndexOf("o"));                        //7
+console.log(text4.lastIndexOf("d"));                        //10
