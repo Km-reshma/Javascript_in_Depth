@@ -162,3 +162,34 @@ console.log(str.search("A"));                        //-1
 
 //regular Expression :
 console.log(str.search(/World/));                   //6
+
+
+
+
+
+
+/*
+//___________________ ############ match() and matchAll() method ################# _____________________________
+
+Both methods are used to search for matches in a string using a string or regular expression (RegExp).
+
+1. match() : match() finds a match and returns the result as an array.
+Syntax : string.match(pattern)
+
+2. matchAll() : matchAll() finds all matches and returns an iterator.
+                It is mainly used with regular expressions and the g flag
+Syntax : string.matchAll(regex)      */
+
+
+//---------------------------------------------------------------------------------------------------------------
+
+//Example 1 : Find a Word
+let text = "I love JavaScript";                                                // output is : null , bcz no match is found like integers(d->0-9 int)
+console.log(text.match("JavaScript"));            // ['JavaScript', index: 7, input: 'I love JavaScript', groups: undefined]
+
+
+//Example 2: Find All Numbers
+let text1 = "My phone numbers are 123 and 456";
+console.log(text1.match(/\d+/));                     // ['123', index: 21, input: 'My phone numbers are 123 and 456', groups: undefined]
+
+console.log(text1.match(/\d+/g));                   //[ '123', '456' ] , g is basically used for find all match if we put patter (\d) means integers , this method find all integers value and return as the integer array rather than whole string as array 
