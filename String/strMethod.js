@@ -193,3 +193,20 @@ let text1 = "My phone numbers are 123 and 456";
 console.log(text1.match(/\d+/));                     // ['123', index: 21, input: 'My phone numbers are 123 and 456', groups: undefined]
 
 console.log(text1.match(/\d+/g));                   //[ '123', '456' ] , g is basically used for find all match if we put patter (\d) means integers , this method find all integers value and return as the integer array rather than whole string as array 
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+//Example 1
+
+let text2 = "cat bat rat";
+
+let result = text2.matchAll(/at/g);
+
+console.log([...result]);                   //[...] converts the iterator into an array.
+                                            
+//output is :
+/*[
+  [ 'at', index: 1, input: 'cat bat rat', groups: undefined ],
+  [ 'at', index: 5, input: 'cat bat rat', groups: undefined ],
+  [ 'at', index: 9, input: 'cat bat rat', groups: undefined ]
+]*/
