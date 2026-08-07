@@ -33,7 +33,7 @@ console.log(str2.charCodeAt(5));                           //97
 
 
 
-
+/*
 //____________________########### concat() method ####################___________________________________
 
 //concat() is used to join (combine) arrays or strings without changing the original one.
@@ -45,7 +45,7 @@ let str = str1.concat(str2);
 console.log(str);                       //HelloAlice, if we write " let str = str1.concat(" ",str2); "
 
 console.log(str1.concat(" ",str2));      //Hello Alice                     if we add the empty string then gives the 1 space 
-
+*/
 
 
 
@@ -58,7 +58,7 @@ true   : if the text is found.
 false  : if the text is not found.
 
 Syntax: string.includes(searchString, startPosition);
-*/
+
 //Example 1 :
 let text = "JavaScript is awesome";
 console.log(text.includes("javaScript"));          //false
@@ -68,7 +68,7 @@ console.log(text.includes("some"));                //true
 //Example 2: 
 let text1 = "Hello World";
 console.log(text1.includes("World", 6));          //true  
-
+*/
 
 
 
@@ -84,7 +84,6 @@ false   :  otherwise.
 Synyax :
 string.startsWith(searchString)
 string.endsWith(searchString)
-*/
 
 //Example :
 
@@ -101,6 +100,7 @@ console.log(text3.endsWith("t"));                        //true
 
 console.log(text3.startsWith("Script", 4));              //true
 console.log(text3.startsWith("r",6));                    //true
+*/
 
 
 
@@ -117,7 +117,6 @@ If the text is not found, both return -1.
 Syntax:
 string.indexOf(searchString)
 string.latIndexOf(searchString)
-*/
 
 //Example :
 
@@ -136,3 +135,30 @@ console.log(text4.indexOf("o"));                            //4
 console.log(text4.lastIndexOf("l"));                        //9          last wala l count ua bcz its reads last occurences
 console.log(text4.lastIndexOf("o"));                        //7
 console.log(text4.lastIndexOf("d"));                        //10
+*/
+
+
+
+
+/*
+//___________________ ########### search() method ###################### ___________________________________
+
+The search() method finds the position (index) of the first match in a string.
+It returns: if match then retutn the index of that string(value)
+            if not match ot not found then return -1.
+
+search() finds the first occurrence of text.
+Returns the starting index of the match.
+Returns -1 if not found.
+Unlike indexOf(), it supports regular expressions (RegExp).  
+
+
+*/
+let str = "Hello World";
+console.log(str.search("H"));                        //0
+console.log(str.search("Hello"));                    //0
+console.log(str.search("World"));                    //6
+console.log(str.search("A"));                        //-1
+
+//regular Expression :
+console.log(str.search(/World/));                   //6
